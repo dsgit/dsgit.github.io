@@ -13,3 +13,7 @@ $$
 \gamma & \delta
 \end{pmatrix}
 $$
+
+```{r}
+plot(cars, pch = 18)
+```
