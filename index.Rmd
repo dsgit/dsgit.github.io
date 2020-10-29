@@ -14,6 +14,44 @@ $$
 \end{pmatrix}
 $$
 
-```{r}
-plot(cars, pch = 18)
+```{r, include=FALSE}
+suppressMessages(library(quantmod))
+y <- getSymbols("^GSPC", auto.assign=F)
+colnames(y) <- c("op","hi", "lo", "cl", "vo", "ac")
+y <- y["2020"]
+```
+```{r, echo=FALSE}
+plot(y$ac, main="S&P500")
+```
+
+
+## Styles
+
+```{r, include=FALSE}
+vtwv <- getSymbols("VTWV", auto.assign=F)["2020"][,6] # Small Value
+vtwg <- getSymbols("VTWG", auto.assign=F)["2020"][,6] # Small growth
+vonv <- getSymbols("VONV", auto.assign=F)["2020"][,6] # Large Value
+vong <- getSymbols("VONG", auto.assign=F)["2020"][,6] # Large growth
+
+colnames(vtwv)[1] <- "SV"
+colnames(vtwg)[1] <- "SG"
+colnames(vonv)[1] <- "LV"
+colnames(vong)[1] <- "LG"
+
+rsv <- dailyReturn(vtwv); colnames(rsv)[1] <- "SV"
+rsg <- dailyReturn(vtwg); colnames(rsg)[1] <- "SG"
+rlv <- dailyReturn(vonv); colnames(rlv)[1] <- "LV"
+rlg <- dailyReturn(vong); colnames(rlg)[1] <- "LG"
+
+rs <- merge(rsv, rsg)
+rl <- merge(rlv, rlg)
+r  <- merge(rs, rl)
+
+R <- data.frame(r)
+X <- apply(1+R, 2, cumprod)
+X <- xts(X, order.by=as.Date(rownames(X)))
+```
+
+```{r, echo=FALSE}
+plot(X, main="Styles", legend.loc="topleft")
 ```
