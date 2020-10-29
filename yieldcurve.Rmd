@@ -1,0 +1,16 @@
+---
+title: "Yield Curve"
+---
+
+
+```{r, include=FALSE}
+suppressMessages(library(quantmod))
+suppressMessages(library(Quandl))
+yc <- Quandl("USTREASURY/YIELD", api_key="NGPKkZ6sdNZyx6GeaVZT")
+y <- yc[1,-1]
+x <- c(1/12, 2/12, 3/12, 6/12, 1, 2, 3, 5, 7, 10, 20, 30)
+```
+
+```{r, echo=FALSE}
+plot(x, y, type='l', main="Yield Curve", xlab="Maturity", ylab="Rate")
+```

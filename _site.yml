@@ -6,6 +6,8 @@ navbar:
       href: index.html
     - text: "Styles"
       href: styles.html
+    - text: "Yield Curve"
+      href: yieldcurve.html
     - text: "About"
       href: about.html
 output:
