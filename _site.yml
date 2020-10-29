@@ -1,9 +1,11 @@
 name: "my-website"
 navbar:
-  title: "My Website"
+  title: "Stock Stuff"
   left:
     - text: "Home"
       href: index.html
+    - text: "Styles"
+      href: styles.html
     - text: "About"
       href: about.html
 output:
