@@ -2,17 +2,6 @@
 title: Home
 ---
 
-
-$$
-   f(k) = {n \choose k} p^{k} (1-p)^{n-k}
-$$
-
-$$
-\Theta = \begin{pmatrix}\alpha & \beta\\
-\gamma & \delta
-\end{pmatrix}
-$$
-
 ```{r, include=FALSE}
 suppressMessages(library(quantmod))
 y <- getSymbols("^GSPC", auto.assign=F)
