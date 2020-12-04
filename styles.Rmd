@@ -1,10 +1,12 @@
 ---
-title: "Styles"
+title: "Style Comparison"
 ---
 
 
 ```{r, include=FALSE}
 suppressMessages(library(quantmod))
+suppressMessages(library(tidyverse))
+
 vtwv <- getSymbols("VTWV", auto.assign=F)["2020"][,6] # Small Value
 vtwg <- getSymbols("VTWG", auto.assign=F)["2020"][,6] # Small growth
 vonv <- getSymbols("VONV", auto.assign=F)["2020"][,6] # Large Value
@@ -24,11 +26,18 @@ rs <- merge(rsv, rsg)
 rl <- merge(rlv, rlg)
 r  <- merge(rs, rl)
 
-R <- data.frame(r)
-X <- apply(1+R, 2, cumprod)
-X <- xts(X, order.by=as.Date(rownames(X)))
+X <- apply(1+r, 2, cumprod) %>% 
+   data.frame() %>% 
+   rownames_to_column("date") %>% 
+   mutate(date = as.Date(date)) %>% 
+   pivot_longer(cols = starts_with(c("S", "L")), names_to = "style") %>% 
+   mutate(style = str_replace_all(style, "\\.", " "))
 ```
 
 ```{r, echo=FALSE}
-plot(X, main="Styles", legend.loc="topleft")
+ggplot(X, aes(x=date, y=value, col=style)) + 
+   geom_line()  +
+   xlab("Date") +
+   ylab("Cumulative Value")
+
 ```

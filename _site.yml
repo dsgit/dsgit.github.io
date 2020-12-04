@@ -4,16 +4,21 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Styles"
-      href: styles.html
-    - text: "Yield Curve"
-      href: yieldcurve.html
+      menu:
+      - text: "Large Capitalization Stocks"
+        href: index.html
+      - text: "Style Comparison"
+        href: styles.html
+      - text: "Sector Performance"
+        href: sectors.html
+      - text: "Yield Curve"
+        href: yieldcurve.html
+    - text: "Economics"
+      href: gdp.html
     - text: "About"
       href: about.html
 output:
   html_document:
     theme: cosmo
     highlight: textmate
-    include:
-      after_body: footer.html
     css: styles.css

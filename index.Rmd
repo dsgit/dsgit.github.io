@@ -1,14 +1,26 @@
 ---
-title: Home
+title: Large Capitalization Stocks
 ---
 
 ```{r, include=FALSE}
 suppressMessages(library(quantmod))
+suppressMessages(library(ggplot2))
+suppressMessages(library(lubridate))
+suppressMessages(library(tidyverse))
+
 y <- getSymbols("^GSPC", auto.assign=F)
 colnames(y) <- c("op","hi", "lo", "cl", "vo", "ac")
 y <- y["2020"]
+
+y <- data.frame(y) %>% 
+   rownames_to_column("date") %>% 
+   mutate(date = as.Date(date))
+
 ```
 ```{r, echo=FALSE}
-plot(y$ac, main="S&P500")
+ggplot(y, aes(x=date, y=ac)) + 
+   geom_line() +
+   ylab("Index Level") +
+   xlab("Date")
 ```
 

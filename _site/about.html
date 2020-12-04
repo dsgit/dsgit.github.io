@@ -284,14 +284,29 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Home
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index.html">Large Capitalization Stocks</a>
+    </li>
+    <li>
+      <a href="styles.html">Style Comparison</a>
+    </li>
+    <li>
+      <a href="sectors.html">Sector Performance</a>
+    </li>
+    <li>
+      <a href="yieldcurve.html">Yield Curve</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="styles.html">Styles</a>
-</li>
-<li>
-  <a href="yieldcurve.html">Yield Curve</a>
+  <a href="gdp.html">Economics</a>
 </li>
 <li>
   <a href="about.html">About</a>
@@ -325,7 +340,6 @@ $(document).ready(function () {
 \]</span></p>
 <p>There is nothing more to know about this website. Sorry.</p>
 
-<p>Copyright &copy; 2020 Bogus, Inc. All rights reserved.</p>
 
 
 

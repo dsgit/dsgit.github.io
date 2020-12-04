@@ -1,0 +1,35 @@
+---
+title: Gross Domestic Product
+---
+
+```{r, include=FALSE}
+# See https://www.r-spatial.org/r/2018/10/25/ggplot2-sf.html
+
+suppressMessages(library(tidyverse))
+suppressMessages(library(ggplot2))
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+world <- ne_countries(scale="medium", returnclass="sf") %>%
+   mutate(gdp = log10(gdp_md_est)) %>%
+   mutate(country = iso_a3)
+
+big <- world %>% top_n(10, wt=gdp) %>% arrange(desc(gdp))
+
+tab <- data.frame(big) %>% select(country, gdp_md_est)
+colnames(tab) <- c("Country", "GDP")
+```
+```{r, echo=FALSE, results='asis'}
+library(knitr)
+kable(tab, caption="Countries with Top Ten GDPs")
+```
+
+```{r, echo=FALSE, warning=F}
+ggplot(data = world) +
+   geom_sf(aes(fill = gdp), show.legend=F) +
+   xlab("Longitude") + ylab("Latitude") +
+   ggtitle("GDP") +
+   scale_fill_viridis_c() 
+   # geom_sf_text(data=big, aes(label=country))
+
+```
