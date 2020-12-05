@@ -1,0 +1,26 @@
+---
+title: Oil Price
+---
+
+```{r, include=FALSE}
+rm(list=ls())
+library(RSQLite)
+suppressMessages(library(ggplot2))
+suppressMessages(library(tidyverse))
+
+# Get the ETF prices from the database.
+con <- dbConnect(SQLite(), dbname="/data/db")
+prices <- dbGetQuery(con, "select * from oil;")
+dbDisconnect(con)
+
+prices <- data.frame(prices) %>%
+   mutate(date = as.Date(date)) %>%
+   filter(date >= "2017-01-01")
+
+```
+```{r, echo=FALSE}
+ggplot(prices, aes(x=date, y=price)) +
+   geom_line() +
+   ylab("Oil Price") +
+   xlab("Date")
+```

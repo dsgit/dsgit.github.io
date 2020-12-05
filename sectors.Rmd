@@ -55,6 +55,21 @@ R <- round(100 * R, 1)
 
 colnames(R) <- substr(colnames(R), 2, 10)
 ```
+
+| Abbreviation  | Sector                  |
+|---------------|-------------------------|
+| ENY           | Energy                  |
+| MAT           | Materials               |
+| IDU           | Industrials             |
+| UTY           | Utilities               |
+| HLC           | Health Care             |
+| NCL           | Financials              |
+| DIS           | Consumer Discretionary  |
+| STA           | Consumer Staples        |
+| TEC           | Information Technology  |
+| COM           | Communication Services  |
+| REL           | Real Estate             |
+
 ```{r, echo=FALSE, results='asis'}
 library(knitr)
 kable(t(R), caption="Performance of Market Sectors")

@@ -13,6 +13,10 @@ navbar:
         href: sectors.html
       - text: "Yield Curve"
         href: yieldcurve.html
+      - text: "Gold Price"
+        href: gold.html
+      - text: "Oil Price"
+        href: oil.html
     - text: "Economics"
       href: gdp.html
     - text: "About"
