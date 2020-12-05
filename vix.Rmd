@@ -1,5 +1,5 @@
 ---
-title: Gold Price
+title: Market Volatility
 ---
 
 ```{r, include=FALSE}
@@ -9,19 +9,19 @@ suppressMessages(library(lubridate))
 suppressMessages(library(tidyverse))
 options("getSymbols.warning4.0"=FALSE)
 
-g <- getSymbols("GOLDPMGBD228NLBM", src="FRED", auto.assign=F)
-colnames(g) <- "gold"
-g <- g["2017/"]
+y <- getSymbols("^VIX", auto.assign=F)
+colnames(y) <- c("op","hi", "lo", "cl", "vo", "ac")
+y <- y["2017/"]
 
-g <- data.frame(g) %>%
+y <- data.frame(y) %>%
    rownames_to_column("date") %>%
-   mutate(date = as.Date(date)) %>%
+   mutate(date = as.Date(date)) %>% 
    drop_na()
 
 ```
 ```{r, echo=FALSE}
-ggplot(g, aes(x=date, y=gold)) +
+ggplot(y, aes(x=date, y=ac)) +
    geom_line() +
-   ylab("Gold Price") +
+   ylab("Volatility Index (VIX)") +
    xlab("Date")
 ```

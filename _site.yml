@@ -1,9 +1,8 @@
-name: "my-website"
+name: "Investment"
 navbar:
-  title: "Stock Stuff"
+  title: "Investment"
   left:
-    - text: "Home"
-      href: index.html
+    - text: "Markets"
       menu:
       - text: "Large Capitalization Stocks"
         href: index.html
@@ -11,14 +10,20 @@ navbar:
         href: styles.html
       - text: "Sector Performance"
         href: sectors.html
+      - text: "Volatility"
+        href: vix.html
       - text: "Yield Curve"
         href: yieldcurve.html
-      - text: "Gold Price"
-        href: gold.html
+    - text: "Economics"
+      menu:
+      - text: "World GDPs"
+        href: gdp.html
+      - text: "Currencies"
+        href: currencies.html
       - text: "Oil Price"
         href: oil.html
-    - text: "Economics"
-      href: gdp.html
+      - text: "Gold Price"
+        href: gold.html
     - text: "About"
       href: about.html
 output:

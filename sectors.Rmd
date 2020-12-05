@@ -44,34 +44,37 @@ for (k in 1:length(previous)) {
    r <- currprc / p - 1
    R <- rbind(R, r)
 }
-
-rownames(R) <- c("one month",
+R <- round(100 * R, 1) %>% t() %>% data.frame()
+rownames(R) <- substr(rownames(R), 2, 10)
+colnames(R) <- c("one month",
                  "three months",
                  "six months",
                  "one year",
                  "two years",
                  "three years")
-R <- round(100 * R, 1)
+R <- R %>% rownames_to_column("abbreviation")
 
-colnames(R) <- substr(colnames(R), 2, 10)
+a <- c("ENY", "MAT", "IDU", "UTY", "HLC", "NCL", "DIS", "STA", "TEC", "COM", "REL")
+n <- c(
+"Energy",
+"Materials",
+"Industrials",
+"Utilities",
+"Health Care",
+"Financials",
+"Consumer Discretionary",
+"Consumer Staples",
+"Information Technology",
+"Communication Services",
+"Real Estate")
+
+secs <- data.frame(sector=n, abbreviation=a)
+R <- full_join(secs, R, by="abbreviation")
 ```
 
-| Abbreviation  | Sector                  |
-|---------------|-------------------------|
-| ENY           | Energy                  |
-| MAT           | Materials               |
-| IDU           | Industrials             |
-| UTY           | Utilities               |
-| HLC           | Health Care             |
-| NCL           | Financials              |
-| DIS           | Consumer Discretionary  |
-| STA           | Consumer Staples        |
-| TEC           | Information Technology  |
-| COM           | Communication Services  |
-| REL           | Real Estate             |
 
 ```{r, echo=FALSE, results='asis'}
 library(knitr)
-kable(t(R), caption="Performance of Market Sectors")
+kable(R, caption="Performance of Market Sectors")
 ```
 
