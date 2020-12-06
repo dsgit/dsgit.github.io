@@ -9,6 +9,7 @@ suppressMessages(library(Quandl))
 suppressMessages(library(ggplot2))
 suppressMessages(library(lubridate))
 suppressMessages(library(tidyverse))
+options("getSymbols.warning4.0"=FALSE)
 
 yc <- Quandl("USTREASURY/YIELD", api_key="NGPKkZ6sdNZyx6GeaVZT")
 colnames(yc) <- c("date",
@@ -51,6 +52,24 @@ ggplot(yc, aes(x=date, y=spread)) +
    ylab("Treasury Yield Spread (10-year minus 1-year)")
 ```
 
+## The TED Spread
+
+```{r, include=FALSE}
+ted <- getSymbols("TEDRATE", auto.assign=F, src="FRED")
+ted <- ted["2017/"]
+colnames(ted) <- c("TED")
+ted <- data.frame(ted) %>%
+   rownames_to_column("date") %>%
+   mutate(date = as.Date(date)) %>%
+   na.omit()
+```
+
+```{r, echo=FALSE}
+ggplot(ted, aes(x=date, y=TED)) + geom_line() +
+   ggtitle("TED Spread")
+```
+
+
 ## The Yield Curve (Current and Previous Two Year Ends)
 
 ```{r, echo=FALSE}
@@ -59,3 +78,5 @@ ggplot(y, aes(x=maturity, y=value, col=date)) +
    xlab("Maturity (years)") +
    ylab("Rate (%)")
 ```
+
+
