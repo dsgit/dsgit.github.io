@@ -18,7 +18,8 @@ dbDisconnect(con)
 prices <- data.frame(prices) %>%
    mutate(date = as.Date(date)) %>%
    select(ticker, date, adjusted) %>%
-   filter(date >= "2017-01-01") %>%
+   filter(date >= "2017-01-01") %>% 
+   filter(ticker != "SP500") %>% 
    group_by(ticker) %>%
    mutate(price = adjusted / first(adjusted))
 

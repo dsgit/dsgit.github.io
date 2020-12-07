@@ -16,8 +16,6 @@ navbar:
         href: yieldcurve.html
     - text: "Economics"
       menu:
-      - text: "World GDPs"
-        href: gdp.html
       - text: "Currencies"
         href: currencies.html
       - text: "Oil Price"
