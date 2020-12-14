@@ -3,62 +3,36 @@ title: "Currencies"
 ---
 
 ```{r setup, include=FALSE}
-suppressMessages(library(quantmod))
+library(RSQLite)
 suppressMessages(library(tidyverse))
 suppressMessages(library(ggplot2))
-options("getSymbols.warning4.0"=FALSE)
 ```
 
+```{r, include=FALSE}
+# Get all currency data from the database.
+con <- dbConnect(SQLite(), dbname="/data/db")
+y   <- dbGetQuery(con, "select * from currencies;")
+dbDisconnect(con)
+y <- y %>% data.frame() %>% mutate(date = as.Date(date))
+```
 
 ```{r, include=FALSE}
 # Dollar trade-weighted index (Jan 2006 = 100)
-y <- getSymbols("DTWEXBGS", auto.assign=F, src="FRED")
-colnames(y) <- c("dollar")
-y <- data.frame(y) %>%
-   rownames_to_column("date") %>% 
-   mutate(date = as.Date(date)) %>% 
-   filter(date >= "2017-01-01") %>% 
-   na.omit()
+z <- y %>% filter(name == "USD") %>% filter(date >= "2017-01-01")
 ```
 
 ```{r, echo=FALSE}
-ggplot(y, aes(x=date, y=dollar)) + geom_line() +
+ggplot(z, aes(x=date, y=value)) + geom_line() +
    ggtitle("United Stated Dollar Trade-Weighted Index (100 at January 2006)")
 ```
 
-
 ```{r, include=FALSE}
-eur <- getSymbols("DEXUSEU", auto.assign=F, src="FRED")
-colnames(eur) <- c("rate")
-eur <- data.frame(eur) %>%
-   rownames_to_column("date") %>% 
-   mutate(date = as.Date(date)) %>% 
-   filter(date >= "2017-01-01") %>% 
-   add_column(currency = "Euro")
-y <- eur
-
-aud <- getSymbols("DEXUSAL", auto.assign=F, src="FRED")
-colnames(aud) <- c("rate")
-aud <- data.frame(aud) %>%
-   rownames_to_column("date") %>% 
-   mutate(date = as.Date(date)) %>% 
-   filter(date >= "2017-01-01") %>% 
-   add_column(currency = "AUD")
-y <- rbind(y, aud) 
-
-gbp <- getSymbols("DEXUSUK", auto.assign=F, src="FRED")
-colnames(gbp) <- c("rate")
-gbp <- data.frame(gbp) %>%
-   rownames_to_column("date") %>% 
-   mutate(date = as.Date(date)) %>% 
-   filter(date >= "2017-01-01") %>% 
-   add_column(currency = "GBP") 
-y <- rbind(y, gbp)
+# Dollar trade-weighted index (Jan 2006 = 100)
+z <- y %>% filter(name != "USD") %>% filter(date >= "2017-01-01")
 ```
 
 ```{r, echo=FALSE}
-y <- y %>% na.omit()
-ggplot(y, aes(x=date, y=rate, col=currency)) + 
+ggplot(z, aes(x=date, y=value, col=name)) + 
    geom_line() + 
    ggtitle("One Currency Unit in United States Dollars.") +
    ylab("Rate") +
