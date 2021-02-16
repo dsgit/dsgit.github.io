@@ -2,6 +2,11 @@
 title: "Currencies"
 ---
 
+```{r updatedatabase, include=FALSE}
+# Update database.
+source("/Dropbox/ds/inv/data/currencies/getData.R")
+```
+
 ```{r setup, include=FALSE}
 library(RSQLite)
 suppressMessages(library(tidyverse))
@@ -14,6 +19,7 @@ con <- dbConnect(SQLite(), dbname="/data/db")
 y   <- dbGetQuery(con, "select * from currencies;")
 dbDisconnect(con)
 y <- y %>% data.frame() %>% mutate(date = as.Date(date))
+latest <- y %>% pull(date) %>% tail(1)
 ```
 
 ```{r, include=FALSE}
@@ -22,8 +28,10 @@ z <- y %>% filter(name == "USD") %>% filter(date >= "2017-01-01")
 ```
 
 ```{r, echo=FALSE}
-ggplot(z, aes(x=date, y=value)) + geom_line() +
-   ggtitle("United Stated Dollar Trade-Weighted Index (100 at January 2006)")
+ggplot(z, aes(x=date, y=value)) + 
+   geom_line() +
+   ggtitle("United Stated Dollar Trade-Weighted Index (100 at January 2006)") + 
+   labs(caption = paste("Updated:", latest))
 ```
 
 ```{r, include=FALSE}

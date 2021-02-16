@@ -2,6 +2,12 @@
 title: Oil Price
 ---
 
+
+```{r updatedatabase, include=FALSE}
+# Update database.
+source("/Dropbox/ds/inv/data/oil/01-fred2db.R")
+```
+
 ```{r, include=FALSE}
 rm(list=ls())
 library(RSQLite)
@@ -15,12 +21,14 @@ dbDisconnect(con)
 
 prices <- data.frame(prices) %>%
    mutate(date = as.Date(date)) %>%
-   filter(date >= "2017-01-01")
-
+   filter(date >= "2017-01-01") %>% 
+   drop_na()
+latest <- prices %>% pull(date) %>% tail(1)
 ```
 ```{r, echo=FALSE}
 ggplot(prices, aes(x=date, y=price)) +
    geom_line() +
    ylab("Oil Price") +
-   xlab("Date")
+   xlab("Date") + 
+   labs(caption = paste("Updated:", latest))
 ```

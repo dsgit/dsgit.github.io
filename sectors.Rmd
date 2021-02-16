@@ -3,6 +3,11 @@ title: "Sector Performance"
 ---
 
 ```{r, include=FALSE}
+# Update database.
+source("/Dropbox/ds/inv/data/sectors/01-getprices.R")
+```
+
+```{r, include=FALSE}
 rm(list=ls())
 library(readr)
 library(RSQLite)
@@ -24,10 +29,13 @@ prices <- data.frame(prices) %>%
    mutate(price = adjusted / first(adjusted))
 
 pp <- prices %>% mutate(ticker = substr(ticker, 2, 10))
+latest <- pp %>% pull(date) %>% tail(1)
 ```
 
 ```{r, echo=FALSE}
-ggplot(pp, aes(x=date, y=price, col=ticker)) + geom_line()
+ggplot(pp, aes(x=date, y=price, col=ticker)) + 
+   geom_line()+ 
+   labs(caption = paste("Updated:", latest))
 ```
 
 ```{R, include=FALSE}

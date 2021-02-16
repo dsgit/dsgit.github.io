@@ -32,6 +32,7 @@ maturity <- parse_number(y$maturity)
 maturity[ymonthly] <- maturity[ymonthly] / 12
 y <- y %>% select(-maturity)
 y <- y %>% add_column(maturity) %>% mutate(date=as.character(date))
+latest <- y %>% pull(date) %>% tail(1)
 ```
 
 ## The Three-Month Treasury Bill Rate
@@ -40,7 +41,8 @@ y <- y %>% add_column(maturity) %>% mutate(date=as.character(date))
 ggplot(yc, aes(x=date, y=M3)) +
    geom_line()  +
    xlab("Date") +
-   ylab("Three-Month Treasury Bill Rate (%)")
+   ylab("Three-Month Treasury Bill Rate (%)") + 
+   labs(caption = paste("Updated:", latest))
 ```
 
 ## The Treasury Yield Spread
@@ -74,7 +76,7 @@ ggplot(ted, aes(x=date, y=TED)) + geom_line() +
 
 ```{r, echo=FALSE}
 ggplot(y, aes(x=maturity, y=value, col=date)) +
-   geom_line()  +
+   geom_line(size=1.5)  +
    xlab("Maturity (years)") +
    ylab("Rate (%)")
 ```
