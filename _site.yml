@@ -1,11 +1,12 @@
 name: "Investment"
 navbar:
-  title: "Investment"
+  title: "Home"
+  href: index.html
   left:
     - text: "Markets"
       menu:
       - text: "Large Capitalization Stocks"
-        href: index.html
+        href: large.html
       - text: "Style Comparison"
         href: styles.html
       - text: "Sector Performance"

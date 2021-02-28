@@ -1,37 +1,5 @@
 ---
-title: Large Capitalization Stocks
+title: Home
 ---
 
-```{r, include=FALSE}
-# Update the stock indexes database.
-source("/Dropbox/ds/inv/data/yahoo/indexes/ndx2db.R")
-```
-
-```{r, include=FALSE}
-library(RSQLite)
-suppressMessages(library(ggplot2))
-suppressMessages(library(lubridate))
-suppressMessages(library(tidyverse))
-
-
-# Get the SP500 prices from the database.
-con <- dbConnect(SQLite(), dbname="/data/db")
-y   <- dbGetQuery(con, "select * from yInd where ticker = 'GSPC';")
-dbDisconnect(con)
-
-# Use only recent data.
-y <- data.frame(y) %>% 
-   select(-ticker) %>% 
-   mutate(date = as.Date(date)) %>% 
-   filter(date >= "2020-01-01")
-latest <- y %>% pull(date) %>% tail(1)
-
-```
-```{r, echo=FALSE}
-ggplot(y, aes(x=date, y=ac)) + 
-   geom_line() +
-   ylab("Index Level") +
-   xlab("Date") + 
-   labs(caption = paste("Updated:", latest))
-```
-
+Welcome!
