@@ -2,6 +2,7 @@
 title: Large Capitalization Stocks
 ---
 
+
 ```{r, include=FALSE}
 # Update the stock indexes database.
 source("/Dropbox/ds/inv/data/yahoo/indexes/ndx2db.R")
@@ -27,7 +28,7 @@ y <- data.frame(y) %>%
 latest <- y %>% pull(date) %>% tail(1)
 
 ```
-```{r, echo=FALSE}
+```{r, largecap, echo=FALSE}
 ggplot(y, aes(x=date, y=ac)) + 
    geom_line() +
    ylab("Index Level") +

@@ -2,4 +2,13 @@
 title: Home
 ---
 
-Welcome!
+1. US Markets
+   - [Large Capitalization Stocks](large.html)
+   - [Style Comparison](styles.html)
+   - [Sector Performance](sectors.html)
+   - [Volatility](vix.html)
+   - [Yield Curve](yieldcurve.html)
+2. Economic Variables
+   - [Currencies](currencies.html)
+   - [Oil Price](oil.html)
+   - [Gold Price](gold.html)
