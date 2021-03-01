@@ -41,7 +41,25 @@ latest <- y %>% pull(date) %>% tail(1)
 ggplot(yc, aes(x=date, y=M3)) +
    geom_line()  +
    xlab("Date") +
-   ylab("Three-Month Treasury Bill Rate (%)") + 
+   ylab("Three-Month Treasury Bill Rate (%)") +
+   ggtitle("Three-Month Treasury Bill Rate (%) since 2017") +
+   labs(caption = paste("Updated:", latest))
+```
+
+## One- and Ten-Year Treasury Rates
+
+```{r, echo=FALSE}
+ytd <- yc %>% 
+   filter(date > "2020-06-30") %>% 
+   select(-spread) %>% 
+   select(date, Y1, Y10) %>% 
+   pivot_longer(!date, names_to="maturity", values_to="rate") 
+
+ggplot(ytd, aes(x=date, y=rate, col=maturity)) +
+   geom_line(size=1.5)  +
+   xlab("Date") +
+   ylab("Treasury Rate (%)") +
+   ggtitle("One- and Ten-Year Treasury Rates (%) since Mid 2020") +
    labs(caption = paste("Updated:", latest))
 ```
 
