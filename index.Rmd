@@ -12,3 +12,4 @@ title: Home
    - [Currencies](currencies.html)
    - [Oil Price](oil.html)
    - [Gold Price](gold.html)
+   - [Sentiment](sentiment.html)

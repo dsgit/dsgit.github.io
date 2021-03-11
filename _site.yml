@@ -23,6 +23,8 @@ navbar:
         href: oil.html
       - text: "Gold Price"
         href: gold.html
+      - text: "Sentiment"
+        href: sentiment.html
 #      - text: "US Electricity Generation"
 #        href: elec.html
     - text: "About"
