@@ -8,8 +8,10 @@ title: Home
    - [Sector Performance](sectors.html)
    - [Volatility](vix.html)
    - [Yield Curve](yieldcurve.html)
-2. Economic Variables
+2. Economy
    - [Currencies](currencies.html)
    - [Oil Price](oil.html)
    - [Gold Price](gold.html)
+   - [Housing](housing.html)
+   - [Inflation](inflation.html)
    - [Sentiment](sentiment.html)

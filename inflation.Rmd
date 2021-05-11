@@ -1,0 +1,61 @@
+---
+title:  Inflation
+---
+
+
+```{r, include=FALSE}
+suppressMessages(library(quantmod))
+suppressMessages(library(ggplot2))
+suppressMessages(library(lubridate))
+suppressMessages(library(tidyverse))
+options("getSymbols.warning4.0"=FALSE)
+
+G <- getSymbols("CPIAUCSL", src="FRED", auto.assign=F)
+g <- G['1980/']
+g <- data.frame(g) %>%
+   rownames_to_column("date") %>%
+   mutate(date = as.Date(date)) %>%
+   rename(cpi = CPIAUCSL) %>%
+   drop_na()
+
+r <- exp(diff(log(G), 12)) - 1
+r <- 100 * r['1980/']
+r <- data.frame(r) %>%
+   rownames_to_column("date") %>%
+   mutate(date = as.Date(date)) %>%
+   rename(rate = CPIAUCSL) %>%
+   drop_na()
+
+latest <- g %>% pull(date) %>% tail(1)
+```
+
+## Consumer Price Index. 1982-1984 = 100, Seasonally Adjusted.
+
+```{r, echo=FALSE}
+ggplot(g, aes(x=date, y=cpi)) +
+   geom_line() +
+   ylab("Consumer Price Index for All Urban Consumers") +
+   xlab("Date") +
+   labs(caption = paste("Updated:", Sys.Date(), 
+                        "  Most recent data:", latest))
+```
+
+## Annual Percentage Change in CPI.
+
+```{r, echo=FALSE}
+ggplot(r, aes(x=date, y=rate)) +
+   geom_line() +
+   ylab("Annual Percentage Change in Consumer Price Index") +
+   xlab("Date") +
+   labs(caption = paste("Updated:", Sys.Date(), 
+                        "  Most recent data:", latest))
+```
+
+```{r, include=FALSE}
+d <- full_join(g,  r,  by="date") %>% slice_tail(n=6)
+```
+
+```{r, echo=FALSE, results='asis'}
+library(knitr)
+kable(d, caption="Recent CPI and Annual Change")
+```

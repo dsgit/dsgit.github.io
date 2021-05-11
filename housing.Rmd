@@ -1,0 +1,28 @@
+---
+title: Case-Shiller Home Price Index
+---
+
+```{r, include=FALSE}
+suppressMessages(library(quantmod))
+suppressMessages(library(ggplot2))
+suppressMessages(library(lubridate))
+suppressMessages(library(tidyverse))
+options("getSymbols.warning4.0"=FALSE)
+
+g <- getSymbols("CSUSHPINSA", src="FRED", auto.assign=F)
+g <- data.frame(g) %>%
+   rownames_to_column("date") %>%
+   mutate(date = as.Date(date)) %>%
+   rename(housing = CSUSHPINSA) %>%
+   drop_na()
+
+latest <- g %>% pull(date) %>% tail(1)
+```
+```{r, echo=FALSE}
+ggplot(g, aes(x=date, y=housing)) +
+   geom_line() +
+   ylab("Case-Shiller National Home Price Index") +
+   xlab("Date") +
+   labs(caption = paste("Updated:", Sys.Date(), 
+                        "  Most recent data:", latest))
+```

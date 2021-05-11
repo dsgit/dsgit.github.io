@@ -15,7 +15,7 @@ navbar:
         href: vix.html
       - text: "Yield Curve"
         href: yieldcurve.html
-    - text: "Economics"
+    - text: "Economy"
       menu:
       - text: "Currencies"
         href: currencies.html
@@ -23,6 +23,10 @@ navbar:
         href: oil.html
       - text: "Gold Price"
         href: gold.html
+      - text: "Housing"
+        href: housing.html
+      - text: "Inflation"
+        href: inflation.html
       - text: "Sentiment"
         href: sentiment.html
 #      - text: "US Electricity Generation"
