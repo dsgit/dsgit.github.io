@@ -6,6 +6,9 @@ output: pdf_document
 
 ```{r updatedatabase, include=FALSE}
 # Update database.
+library(beepr)
+beep()
+cat("AAII Won't allow downloads from robots.")
 # source("/Dropbox/ds/inv/data/sentiment/getData.R")
 ```
 
