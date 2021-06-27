@@ -1,4 +1,4 @@
----
+﻿---
 title: Home
 ---
 
@@ -14,4 +14,3 @@ title: Home
    - [Gold Price](gold.html)
    - [Housing](housing.html)
    - [Inflation](inflation.html)
-   - [Sentiment](sentiment.html)
