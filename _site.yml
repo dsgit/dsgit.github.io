@@ -27,8 +27,8 @@ navbar:
         href: housing.html
       - text: "Inflation"
         href: inflation.html
-      - text: "Sentiment"
-        href: sentiment.html
+#      - text: "Sentiment"
+#        href: sentiment.html
 #      - text: "US Electricity Generation"
 #        href: elec.html
     - text: "About"
