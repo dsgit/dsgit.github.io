@@ -1,5 +1,5 @@
 ---
-title: "Energy Sector"
+title: "Industrials Sector"
 output: html_document
 ---
 
@@ -7,7 +7,7 @@ output: html_document
 ```
 
 ```{r, echo=FALSE}
-k <- 4
+k <- 7
 ```
 
 ```{r, child="/base/inv/data/sectors/part1.Rmd"}

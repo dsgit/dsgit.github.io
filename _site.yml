@@ -40,6 +40,20 @@ navbar:
         href: sector-consumer-staples.html
       - text: "Energy"
         href: sector-energy.html
+      - text: "Financials"
+        href: sector-financials.html
+      - text: "Health Care"
+        href: sector-health-care.html
+      - text: "Industrials"
+        href: sector-industrials.html
+      - text: "Information Technology"
+        href: sector-information-technology.html
+      - text: "Materials"
+        href: sector-materials.html
+      - text: "Real Estate"
+        href: sector-real-estate.html
+      - text: "Utilities"
+        href: sector-utilities.html
     - text: "About"
       href: about.html
 output:
