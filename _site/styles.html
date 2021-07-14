@@ -244,30 +244,6 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Markets
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="large.html">Large Capitalization Stocks</a>
-    </li>
-    <li>
-      <a href="styles.html">Style Comparison</a>
-    </li>
-    <li>
-      <a href="sectors.html">Sector Performance</a>
-    </li>
-    <li>
-      <a href="vix.html">Volatility</a>
-    </li>
-    <li>
-      <a href="yieldcurve.html">Yield Curve</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -287,6 +263,55 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="inflation.html">Inflation</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Markets
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="large.html">Large Capitalization Stocks</a>
+    </li>
+    <li>
+      <a href="styles.html">Style Comparison</a>
+    </li>
+    <li>
+      <a href="vix.html">Volatility</a>
+    </li>
+    <li>
+      <a href="yieldcurve.html">Yield Curve</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sectors
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="sector-performance.html">Sector Performance</a>
+    </li>
+    <li>
+      <a href="sector-capitalization.html">Sector Capitalization</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="sector-communications-sevices.html">Communication Services</a>
+    </li>
+    <li>
+      <a href="sector-consumer-discretionary.html">Consumer Discretionary</a>
+    </li>
+    <li>
+      <a href="sector-consumer-staples.html">Consumer Staples</a>
+    </li>
+    <li>
+      <a href="sector-energy.html">Energy</a>
     </li>
   </ul>
 </li>
@@ -312,59 +337,140 @@ $(document).ready(function () {
 
 <p><img src="styles_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <table>
-<caption>Performance of Styles</caption>
+<caption>
+Performance of Styles
+</caption>
 <thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">style</th>
-<th align="right">one month</th>
-<th align="right">three months</th>
-<th align="right">six months</th>
-<th align="right">one year</th>
-<th align="right">two years</th>
-<th align="right">three years</th>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+style
+</th>
+<th style="text-align:right;">
+one month
+</th>
+<th style="text-align:right;">
+three months
+</th>
+<th style="text-align:right;">
+six months
+</th>
+<th style="text-align:right;">
+one year
+</th>
+<th style="text-align:right;">
+two years
+</th>
+<th style="text-align:right;">
+three years
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">SV</td>
-<td align="left">Small Value</td>
-<td align="right">-5.2</td>
-<td align="right">1.8</td>
-<td align="right">17.7</td>
-<td align="right">81.5</td>
-<td align="right">41.4</td>
-<td align="right">27.6</td>
+<tr>
+<td style="text-align:left;">
+SV
+</td>
+<td style="text-align:left;">
+Small Value
+</td>
+<td style="text-align:right;">
+-5.7
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:right;">
+14.1
+</td>
+<td style="text-align:right;">
+73.7
+</td>
+<td style="text-align:right;">
+38.3
+</td>
+<td style="text-align:right;">
+27.3
+</td>
 </tr>
-<tr class="even">
-<td align="left">SG</td>
-<td align="left">Small Growth</td>
-<td align="right">1.5</td>
-<td align="right">1.7</td>
-<td align="right">1.7</td>
-<td align="right">49.5</td>
-<td align="right">55.4</td>
-<td align="right">48.5</td>
+<tr>
+<td style="text-align:left;">
+SG
+</td>
+<td style="text-align:left;">
+Small Growth
+</td>
+<td style="text-align:right;">
+-1.5
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+-1.0
+</td>
+<td style="text-align:right;">
+49.3
+</td>
+<td style="text-align:right;">
+51.4
+</td>
+<td style="text-align:right;">
+46.3
+</td>
 </tr>
-<tr class="odd">
-<td align="left">LV</td>
-<td align="left">Large Value</td>
-<td align="right">-0.6</td>
-<td align="right">3.6</td>
-<td align="right">14.2</td>
-<td align="right">46.3</td>
-<td align="right">30.6</td>
-<td align="right">39.6</td>
+<tr>
+<td style="text-align:left;">
+LV
+</td>
+<td style="text-align:left;">
+Large Value
+</td>
+<td style="text-align:right;">
+-0.7
+</td>
+<td style="text-align:right;">
+3.4
+</td>
+<td style="text-align:right;">
+13.4
+</td>
+<td style="text-align:right;">
+43.3
+</td>
+<td style="text-align:right;">
+28.9
+</td>
+<td style="text-align:right;">
+39.4
+</td>
 </tr>
-<tr class="even">
-<td align="left">LG</td>
-<td align="left">Large Growth</td>
-<td align="right">7.9</td>
-<td align="right">8.4</td>
-<td align="right">14.2</td>
-<td align="right">38.7</td>
-<td align="right">76.2</td>
-<td align="right">94.7</td>
+<tr>
+<td style="text-align:left;">
+LG
+</td>
+<td style="text-align:left;">
+Large Growth
+</td>
+<td style="text-align:right;">
+5.6
+</td>
+<td style="text-align:right;">
+7.3
+</td>
+<td style="text-align:right;">
+15.4
+</td>
+<td style="text-align:right;">
+41.3
+</td>
+<td style="text-align:right;">
+74.0
+</td>
+<td style="text-align:right;">
+92.2
+</td>
 </tr>
 </tbody>
 </table>

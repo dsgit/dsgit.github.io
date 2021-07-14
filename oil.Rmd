@@ -5,7 +5,7 @@ title: Oil Price
 
 ```{r updatedatabase, include=FALSE}
 # Update database.
-source("/Dropbox/ds/inv/data/oil/01-fred2db.R")
+source("/base/inv/data/oil/01-fred2db.R")
 ```
 
 ```{r, include=FALSE}

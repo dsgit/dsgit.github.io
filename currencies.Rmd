@@ -4,7 +4,7 @@ title: "Currencies"
 
 ```{r updatedatabase, include=FALSE}
 # Update database.
-source("/Dropbox/ds/inv/data/currencies/getData.R")
+source("/base/inv/data/currencies/getData.R")
 ```
 
 ```{r setup, include=FALSE}

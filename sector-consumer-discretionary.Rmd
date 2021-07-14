@@ -1,0 +1,20 @@
+---
+title: "Consumer Discretionary Sector"
+output: html_document
+---
+
+```{r, child="/base/inv/data/sectors/part0.Rmd"}
+```
+
+```{r, echo=FALSE}
+k <- 2
+```
+
+```{r, child="/base/inv/data/sectors/part1.Rmd"}
+```
+
+```{r, child="/base/inv/data/sectors/part2.Rmd"}
+```
+
+```{r, child="/base/inv/data/sectors/part3.Rmd"}
+```

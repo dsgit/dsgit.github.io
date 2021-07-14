@@ -4,7 +4,7 @@ title: "Sector Performance"
 
 ```{r, include=FALSE}
 # Update database.
-source("/Dropbox/ds/inv/data/sectors/01-getprices.R")
+source("/base/inv/data/sectors/01-getprices.R")
 ```
 
 ```{r, include=FALSE}
@@ -23,8 +23,8 @@ dbDisconnect(con)
 prices <- data.frame(prices) %>%
    mutate(date = as.Date(date)) %>%
    select(ticker, date, adjusted) %>%
-   filter(date >= "2017-01-01") %>% 
-   filter(ticker != "SP500") %>% 
+   filter(date >= "2017-01-01") %>%
+   filter(ticker != "SP500") %>%
    group_by(ticker) %>%
    mutate(price = adjusted / first(adjusted))
 
@@ -33,8 +33,8 @@ latest <- pp %>% pull(date) %>% tail(1)
 ```
 
 ```{r, echo=FALSE}
-ggplot(pp, aes(x=date, y=price, col=ticker)) + 
-   geom_line()+ 
+ggplot(pp, aes(x=date, y=price, col=ticker)) +
+   geom_line()+
    labs(caption = paste("Updated:", latest))
 ```
 
@@ -65,20 +65,20 @@ R <- R %>% rownames_to_column("abbreviation")
 
 a <- c("ENY", "MAT", "IDU", "UTY", "HLC", "NCL", "DIS", "STA", "TEC", "COM", "REL")
 n <- c(
-"Energy",
-"Materials",
-"Industrials",
-"Utilities",
-"Health Care",
-"Financials",
-"Consumer Discretionary",
-"Consumer Staples",
-"Information Technology",
-"Communication Services",
-"Real Estate")
+   "[Energy](ii.html)",
+   "[Materials](ii.html)",
+   "[Industrials](ii.html)",
+   "[Utilities](ii.html)",
+   "[Health Care](ii.html)",
+   "[Financials](ii.html)",
+   "[Consumer Discretionary](ii.html)",
+   "[Consumer Staples](ii.html)",
+   "[Information Technology](ii.html)",
+   "[Communication Services](sec-COM.html)",
+   "[Real Estate](ii.html)")
 
 secs <- data.frame(sector=n, abbreviation=a)
-R <- full_join(secs, R, by="abbreviation")
+R <- full_join(secs, R, by="abbreviation") %>% arrange(sector)
 ```
 
 

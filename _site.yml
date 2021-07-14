@@ -3,18 +3,6 @@ navbar:
   title: "Home"
   href: index.html
   left:
-    - text: "Markets"
-      menu:
-      - text: "Large Capitalization Stocks"
-        href: large.html
-      - text: "Style Comparison"
-        href: styles.html
-      - text: "Sector Performance"
-        href: sectors.html
-      - text: "Volatility"
-        href: vix.html
-      - text: "Yield Curve"
-        href: yieldcurve.html
     - text: "Economy"
       menu:
       - text: "Currencies"
@@ -27,10 +15,31 @@ navbar:
         href: housing.html
       - text: "Inflation"
         href: inflation.html
-#      - text: "Sentiment"
-#        href: sentiment.html
-#      - text: "US Electricity Generation"
-#        href: elec.html
+    - text: "Markets"
+      menu:
+      - text: "Large Capitalization Stocks"
+        href: large.html
+      - text: "Style Comparison"
+        href: styles.html
+      - text: "Volatility"
+        href: vix.html
+      - text: "Yield Curve"
+        href: yieldcurve.html
+    - text: "Sectors"
+      menu:
+      - text: "Sector Performance"
+        href: sector-performance.html
+      - text: "Sector Capitalization"
+        href: sector-capitalization.html
+      - text: '---------'
+      - text: "Communication Services"
+        href: sector-communications-sevices.html
+      - text: "Consumer Discretionary"
+        href: sector-consumer-discretionary.html
+      - text: "Consumer Staples"
+        href: sector-consumer-staples.html
+      - text: "Energy"
+        href: sector-energy.html
     - text: "About"
       href: about.html
 output:

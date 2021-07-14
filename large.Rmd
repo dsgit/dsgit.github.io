@@ -5,7 +5,7 @@ title: Large Capitalization Stocks
 
 ```{r, include=FALSE}
 # Update the stock indexes database.
-source("/Dropbox/ds/inv/data/yahoo/indexes/ndx2db.R")
+source("/base/inv/data/yahoo/indexes/ndx2db.R")
 ```
 
 ```{r, include=FALSE}

@@ -1,0 +1,41 @@
+---
+title: "Sector Capitalization and Return"
+output: html_document
+---
+
+```{r, child="/base/inv/data/sectors/part0.Rmd"}
+```
+
+## Market Capitalization by Sector
+
+```{r, echo=F}
+capdat <- dat %>% group_by(secabb) %>% summarise(totcap = sum(cap)) 
+cap <- capdat %>% pull(totcap) / 1E6
+names(cap) <- capdat %>% pull(secabb)
+cap <- sort(cap)
+barplot(cap,
+        las  = 2,
+        ylab = "Total Capitalization (Trillion Dollars)")
+```
+
+## Weekly Returns by Sector
+
+```{r, echo=F}
+secordered <- with(dat, reorder(secabb, R1wp, median, na.rm=T))
+boxplot(R1wp ~ secordered, dat,
+        las   = 2,
+        xlab  = "",
+        ylab  = "Last Week's Return")
+grid()
+```
+
+## Monthly Returns by Sector
+
+```{r, echo=F}
+secordered <- with(dat, reorder(secabb, R1m, median, na.rm=T))
+boxplot(R1m ~ secordered, dat,
+        las   = 2,
+        xlab  = "",
+        ylab  = "Last month's Return")
+grid()
+```

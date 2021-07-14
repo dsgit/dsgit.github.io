@@ -1,16 +1,23 @@
-﻿---
+---
 title: Home
 ---
 
-1. US Markets
-   - [Large Capitalization Stocks](large.html)
-   - [Style Comparison](styles.html)
-   - [Sector Performance](sectors.html)
-   - [Volatility](vix.html)
-   - [Yield Curve](yieldcurve.html)
-2. Economy
+1. Economy
    - [Currencies](currencies.html)
    - [Oil Price](oil.html)
    - [Gold Price](gold.html)
    - [Housing](housing.html)
    - [Inflation](inflation.html)
+2. Markets
+   - [Large Capitalization Stocks](large.html)
+   - [Style Comparison](styles.html)
+   - [Volatility](vix.html)
+   - [Yield Curve](yieldcurve.html)
+3. Sectors
+   - [Sector Performance](sector-performance.html)
+   - [Sector Capitalization](sector-capitalization.html)
+   - Sector Summaries
+      - [Communication Services](sector-communications-sevices.html)
+      - [Consumer Discretionary](sector-consumer-discretionary.html)
+      - [Consumer Staples](sector-consumer-staples.html)
+      - [Energy](sector-energy.html)
