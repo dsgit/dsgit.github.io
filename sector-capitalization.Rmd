@@ -6,6 +6,11 @@ output: html_document
 ```{r, child="/base/inv/data/sectors/part0.Rmd"}
 ```
 
+```{=html}
+<br>
+<br>
+```
+
 ## Market Capitalization by Sector
 
 ```{r, echo=F}

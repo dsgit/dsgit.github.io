@@ -14,6 +14,7 @@ library(RSQLite)
 suppressMessages(library(ggplot2))
 suppressMessages(library(tidyverse))
 suppressMessages(library(lubridate))
+suppressMessages(library(kableExtra))
 
 # Get the ETF prices from the database.
 con <- dbConnect(SQLite(), dbname="/data/db")
@@ -65,17 +66,17 @@ R <- R %>% rownames_to_column("abbreviation")
 
 a <- c("ENY", "MAT", "IDU", "UTY", "HLC", "NCL", "DIS", "STA", "TEC", "COM", "REL")
 n <- c(
-   "[Energy](ii.html)",
-   "[Materials](ii.html)",
-   "[Industrials](ii.html)",
-   "[Utilities](ii.html)",
-   "[Health Care](ii.html)",
-   "[Financials](ii.html)",
-   "[Consumer Discretionary](ii.html)",
-   "[Consumer Staples](ii.html)",
-   "[Information Technology](ii.html)",
-   "[Communication Services](sec-COM.html)",
-   "[Real Estate](ii.html)")
+   "Energy",
+   "Materials",
+   "Industrials",
+   "Utilities",
+   "Health Care",
+   "Financials",
+   "Consumer Discretionary",
+   "Consumer Staples",
+   "Information Technology",
+   "Communication Services",
+   "Real Estate")
 
 secs <- data.frame(sector=n, abbreviation=a)
 R <- full_join(secs, R, by="abbreviation") %>% arrange(sector)
@@ -83,7 +84,12 @@ R <- full_join(secs, R, by="abbreviation") %>% arrange(sector)
 
 
 ```{r, echo=FALSE, results='asis'}
-library(knitr)
-kable(R, caption="Performance of Market Sectors")
+# library(knitr)
+# kable(R, caption="Performance of Market Sectors")
+k <- kable(R, 
+           booktabs = TRUE,
+           caption  = "Performance of Market Sectors") %>% 
+   kable_styling(full_width = F)
+k
 ```
 
