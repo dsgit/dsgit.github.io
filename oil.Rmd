@@ -25,10 +25,22 @@ prices <- data.frame(prices) %>%
    drop_na()
 latest <- prices %>% pull(date) %>% tail(1)
 ```
+
 ```{r, echo=FALSE}
-ggplot(prices, aes(x=date, y=price)) +
+oilprice <- prices %>% filter(type == "oil")
+ggplot(oilprice, aes(x=date, y=price)) +
    geom_line() +
    ylab("Oil Price") +
+   xlab("Date") + 
+   labs(caption = paste("Updated:", latest))
+```
+
+## Gasoline Price
+```{r, echo=FALSE}
+gasprice <- prices %>% filter(type == "gasoline")
+ggplot(gasprice, aes(x=date, y=price)) +
+   geom_line() +
+   ylab("Gasoline Price") +
    xlab("Date") + 
    labs(caption = paste("Updated:", latest))
 ```
