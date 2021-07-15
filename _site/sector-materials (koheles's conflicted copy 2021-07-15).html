@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Materials Sector</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Economy
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="currencies.html">Currencies</a>
+    </li>
+    <li>
+      <a href="oil.html">Oil Price</a>
+    </li>
+    <li>
+      <a href="gold.html">Gold Price</a>
+    </li>
+    <li>
+      <a href="housing.html">Housing</a>
+    </li>
+    <li>
+      <a href="inflation.html">Inflation</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Markets
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="large.html">Large Capitalization Stocks</a>
+    </li>
+    <li>
+      <a href="styles.html">Style Comparison</a>
+    </li>
+    <li>
+      <a href="vix.html">Volatility</a>
+    </li>
+    <li>
+      <a href="yieldcurve.html">Yield Curve</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sectors
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="sector-performance.html">Sector Performance</a>
+    </li>
+    <li>
+      <a href="sector-capitalization.html">Sector Capitalization</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="sector-communications-sevices.html">Communication Services</a>
+    </li>
+    <li>
+      <a href="sector-consumer-discretionary.html">Consumer Discretionary</a>
+    </li>
+    <li>
+      <a href="sector-consumer-staples.html">Consumer Staples</a>
+    </li>
+    <li>
+      <a href="sector-energy.html">Energy</a>
+    </li>
+    <li>
+      <a href="sector-financials.html">Financials</a>
+    </li>
+    <li>
+      <a href="sector-health-care.html">Health Care</a>
+    </li>
+    <li>
+      <a href="sector-industrials.html">Industrials</a>
+    </li>
+    <li>
+      <a href="sector-information-technology.html">Information Technology</a>
+    </li>
+    <li>
+      <a href="sector-materials.html">Materials</a>
+    </li>
+    <li>
+      <a href="sector-real-estate.html">Real Estate</a>
+    </li>
+    <li>
+      <a href="sector-utilities.html">Utilities</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Materials Sector</h1>
+
+</div>
+
+
+<p>Updated: 2021-07-10</p>
+<br>
+<br>
+<div id="largest-capitalization-stocks" class="section level2">
+<h2>Largest Capitalization Stocks</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Capitalization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+LIN
+</td>
+<td style="text-align:left;">
+Linde plc
+</td>
+<td style="text-align:right;">
+152
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SHW
+</td>
+<td style="text-align:left;">
+The Sherwin-Williams Company
+</td>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+APD
+</td>
+<td style="text-align:left;">
+Air Products and Chemicals, Inc
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ECL
+</td>
+<td style="text-align:left;">
+Ecolab Inc
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FCX
+</td>
+<td style="text-align:left;">
+Freeport-McMoRan Inc
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+</div>
+<div id="top-and-bottom-returns" class="section level2">
+<h2>Top and Bottom Returns</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Return
+</th>
+<th style="text-align:left;">
+Period
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+BLL
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Ball Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+4.00
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ALB
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Albemarle Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+3.13
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+MLM
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Martin Marietta Materials, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+1.49
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+LIN
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Linde plc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+0.51
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+IFF
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+International Flavors &amp; Fragrances Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+0.47
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FCX
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Freeport-McMoRan Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-10.65
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FMC
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FMC Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-9.45
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NEM
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Newmont Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-9.00
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NUE
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Nucor Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-8.45
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+MOS
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+The Mosaic Company
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-8.09
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+BLL
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Ball Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+3.62
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ALB
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Albemarle Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+2.85
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+MLM
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Martin Marietta Materials, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+2.38
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+VMC
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Vulcan Materials Company
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+2.31
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+IP
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+International Paper Company
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+1.50
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+CTVA
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Corteva, Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-2.36
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+CF
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+CF Industries Holdings, Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.80
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FCX
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Freeport-McMoRan Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.72
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+IFF
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+International Flavors &amp; Fragrances Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.53
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+SEE
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Sealed Air Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.53
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+</div>
+<div id="sector-summary-data" class="section level2">
+<h2>Sector Summary Data</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Capitalization
+</th>
+<th style="text-align:right;">
+Price
+</th>
+<th style="text-align:right;">
+EPS
+</th>
+<th style="text-align:right;">
+PE
+</th>
+<th style="text-align:right;">
+ForwardPE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ALB
+</td>
+<td style="text-align:left;">
+Albemarle Corporation
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+175.51
+</td>
+<td style="text-align:right;">
+3.35
+</td>
+<td style="text-align:right;">
+52.38
+</td>
+<td style="text-align:right;">
+52.08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+APD
+</td>
+<td style="text-align:left;">
+Air Products and Chemicals, Inc
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+291.67
+</td>
+<td style="text-align:right;">
+8.49
+</td>
+<td style="text-align:right;">
+34.37
+</td>
+<td style="text-align:right;">
+27.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BLL
+</td>
+<td style="text-align:left;">
+Ball Corporation
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+84.79
+</td>
+<td style="text-align:right;">
+2.29
+</td>
+<td style="text-align:right;">
+37.04
+</td>
+<td style="text-align:right;">
+23.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CF
+</td>
+<td style="text-align:left;">
+CF Industries Holdings, Inc
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+50.66
+</td>
+<td style="text-align:right;">
+1.86
+</td>
+<td style="text-align:right;">
+27.21
+</td>
+<td style="text-align:right;">
+18.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CTVA
+</td>
+<td style="text-align:left;">
+Corteva, Inc
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+43.45
+</td>
+<td style="text-align:right;">
+4.77
+</td>
+<td style="text-align:right;">
+9.11
+</td>
+<td style="text-align:right;">
+23.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ECL
+</td>
+<td style="text-align:left;">
+Ecolab Inc
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:right;">
+212.76
+</td>
+<td style="text-align:right;">
+-4.49
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+41.15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FCX
+</td>
+<td style="text-align:left;">
+Freeport-McMoRan Inc
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+36.50
+</td>
+<td style="text-align:right;">
+1.23
+</td>
+<td style="text-align:right;">
+29.72
+</td>
+<td style="text-align:right;">
+13.37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FMC
+</td>
+<td style="text-align:left;">
+FMC Corporation
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+107.66
+</td>
+<td style="text-align:right;">
+4.04
+</td>
+<td style="text-align:right;">
+26.66
+</td>
+<td style="text-align:right;">
+14.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IFF
+</td>
+<td style="text-align:left;">
+International Flavors &amp; Fragrances Inc
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+147.70
+</td>
+<td style="text-align:right;">
+1.40
+</td>
+<td style="text-align:right;">
+105.58
+</td>
+<td style="text-align:right;">
+26.32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IP
+</td>
+<td style="text-align:left;">
+International Paper Company
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+62.24
+</td>
+<td style="text-align:right;">
+2.45
+</td>
+<td style="text-align:right;">
+25.38
+</td>
+<td style="text-align:right;">
+13.87
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LIN
+</td>
+<td style="text-align:left;">
+Linde plc
+</td>
+<td style="text-align:right;">
+152
+</td>
+<td style="text-align:right;">
+292.71
+</td>
+<td style="text-align:right;">
+5.49
+</td>
+<td style="text-align:right;">
+53.28
+</td>
+<td style="text-align:right;">
+29.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MLM
+</td>
+<td style="text-align:left;">
+Martin Marietta Materials, Inc
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+357.92
+</td>
+<td style="text-align:right;">
+12.17
+</td>
+<td style="text-align:right;">
+29.41
+</td>
+<td style="text-align:right;">
+30.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MOS
+</td>
+<td style="text-align:left;">
+The Mosaic Company
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+31.79
+</td>
+<td style="text-align:right;">
+2.69
+</td>
+<td style="text-align:right;">
+11.81
+</td>
+<td style="text-align:right;">
+10.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NEM
+</td>
+<td style="text-align:left;">
+Newmont Corporation
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+63.98
+</td>
+<td style="text-align:right;">
+3.19
+</td>
+<td style="text-align:right;">
+20.08
+</td>
+<td style="text-align:right;">
+20.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NUE
+</td>
+<td style="text-align:left;">
+Nucor Corporation
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+97.17
+</td>
+<td style="text-align:right;">
+5.39
+</td>
+<td style="text-align:right;">
+18.04
+</td>
+<td style="text-align:right;">
+6.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SEE
+</td>
+<td style="text-align:left;">
+Sealed Air Corporation
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+58.40
+</td>
+<td style="text-align:right;">
+3.11
+</td>
+<td style="text-align:right;">
+18.77
+</td>
+<td style="text-align:right;">
+16.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SHW
+</td>
+<td style="text-align:left;">
+The Sherwin-Williams Company
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+276.22
+</td>
+<td style="text-align:right;">
+7.74
+</td>
+<td style="text-align:right;">
+35.71
+</td>
+<td style="text-align:right;">
+29.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VMC
+</td>
+<td style="text-align:left;">
+Vulcan Materials Company
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+174.93
+</td>
+<td style="text-align:right;">
+5.13
+</td>
+<td style="text-align:right;">
+34.07
+</td>
+<td style="text-align:right;">
+34.25
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Energy Sector</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Economy
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="currencies.html">Currencies</a>
+    </li>
+    <li>
+      <a href="oil.html">Oil Price</a>
+    </li>
+    <li>
+      <a href="gold.html">Gold Price</a>
+    </li>
+    <li>
+      <a href="housing.html">Housing</a>
+    </li>
+    <li>
+      <a href="inflation.html">Inflation</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Markets
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="large.html">Large Capitalization Stocks</a>
+    </li>
+    <li>
+      <a href="styles.html">Style Comparison</a>
+    </li>
+    <li>
+      <a href="vix.html">Volatility</a>
+    </li>
+    <li>
+      <a href="yieldcurve.html">Yield Curve</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sectors
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="sector-performance.html">Sector Performance</a>
+    </li>
+    <li>
+      <a href="sector-capitalization.html">Sector Capitalization</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="sector-communications-sevices.html">Communication Services</a>
+    </li>
+    <li>
+      <a href="sector-consumer-discretionary.html">Consumer Discretionary</a>
+    </li>
+    <li>
+      <a href="sector-consumer-staples.html">Consumer Staples</a>
+    </li>
+    <li>
+      <a href="sector-energy.html">Energy</a>
+    </li>
+    <li>
+      <a href="sector-financials.html">Financials</a>
+    </li>
+    <li>
+      <a href="sector-health-care.html">Health Care</a>
+    </li>
+    <li>
+      <a href="sector-industrials.html">Industrials</a>
+    </li>
+    <li>
+      <a href="sector-information-technology.html">Information Technology</a>
+    </li>
+    <li>
+      <a href="sector-materials.html">Materials</a>
+    </li>
+    <li>
+      <a href="sector-real-estate.html">Real Estate</a>
+    </li>
+    <li>
+      <a href="sector-utilities.html">Utilities</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Energy Sector</h1>
+
+</div>
+
+
+<p>Updated: 2021-07-10</p>
+<br>
+<br>
+<div id="largest-capitalization-stocks" class="section level2">
+<h2>Largest Capitalization Stocks</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Capitalization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+XOM
+</td>
+<td style="text-align:left;">
+Exxon Mobil Corporation
+</td>
+<td style="text-align:right;">
+258
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CVX
+</td>
+<td style="text-align:left;">
+Chevron Corporation
+</td>
+<td style="text-align:right;">
+201
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COP
+</td>
+<td style="text-align:left;">
+ConocoPhillips
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EOG
+</td>
+<td style="text-align:left;">
+EOG Resources, Inc
+</td>
+<td style="text-align:right;">
+48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SLB
+</td>
+<td style="text-align:left;">
+Schlumberger Limited
+</td>
+<td style="text-align:right;">
+44
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+</div>
+<div id="top-and-bottom-returns" class="section level2">
+<h2>Top and Bottom Returns</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Return
+</th>
+<th style="text-align:left;">
+Period
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+OXY
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Occidental Petroleum Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.74
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+OKE
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ONEOK, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+4.47
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+FANG
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Diamondback Energy, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+2.46
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+COG
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Cabot Oil &amp; Gas Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+1.91
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+COP
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ConocoPhillips
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+0.27
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+BKR
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Baker Hughes Company
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-12.27
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NOV
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NOV Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-11.22
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+VLO
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Valero Energy Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-11.06
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+SLB
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Schlumberger Limited
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-10.60
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+APA
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+APA Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-9.10
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+KMI
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Kinder Morgan, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+0.54
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+OKE
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ONEOK, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+0.23
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+WMB
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+The Williams Companies, Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+-0.89
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+COG
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Cabot Oil &amp; Gas Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+-1.29
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+CVX
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Chevron Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+-1.89
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FANG
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Diamondback Energy, Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-8.81
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+VLO
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Valero Energy Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-7.39
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+OXY
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Occidental Petroleum Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-7.18
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PSX
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Phillips 66
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-5.92
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+HAL
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Halliburton Company
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-5.89
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+</div>
+<div id="sector-summary-data" class="section level2">
+<h2>Sector Summary Data</h2>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Ticker
+</th>
+<th style="text-align:left;">
+Company
+</th>
+<th style="text-align:right;">
+Capitalization
+</th>
+<th style="text-align:right;">
+Price
+</th>
+<th style="text-align:right;">
+EPS
+</th>
+<th style="text-align:right;">
+PE
+</th>
+<th style="text-align:right;">
+ForwardPE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+APA
+</td>
+<td style="text-align:left;">
+APA Corporation
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+20.57
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+979.52
+</td>
+<td style="text-align:right;">
+7.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BKR
+</td>
+<td style="text-align:left;">
+Baker Hughes Company
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+22.73
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+<td style="text-align:right;">
+174.85
+</td>
+<td style="text-align:right;">
+32.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COG
+</td>
+<td style="text-align:left;">
+Cabot Oil &amp; Gas Corporation
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+17.61
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+<td style="text-align:right;">
+25.90
+</td>
+<td style="text-align:right;">
+10.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COP
+</td>
+<td style="text-align:left;">
+ConocoPhillips
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+60.13
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+10021.67
+</td>
+<td style="text-align:right;">
+18.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CVX
+</td>
+<td style="text-align:left;">
+Chevron Corporation
+</td>
+<td style="text-align:right;">
+201
+</td>
+<td style="text-align:right;">
+104.07
+</td>
+<td style="text-align:right;">
+-4.20
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+18.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EOG
+</td>
+<td style="text-align:left;">
+EOG Resources, Inc
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+82.59
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+764.72
+</td>
+<td style="text-align:right;">
+11.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FANG
+</td>
+<td style="text-align:left;">
+Diamondback Energy, Inc
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+89.42
+</td>
+<td style="text-align:right;">
+6.71
+</td>
+<td style="text-align:right;">
+13.33
+</td>
+<td style="text-align:right;">
+9.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAL
+</td>
+<td style="text-align:left;">
+Halliburton Company
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+22.38
+</td>
+<td style="text-align:right;">
+-2.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+24.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KMI
+</td>
+<td style="text-align:left;">
+Kinder Morgan, Inc
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+18.67
+</td>
+<td style="text-align:right;">
+0.80
+</td>
+<td style="text-align:right;">
+23.25
+</td>
+<td style="text-align:right;">
+15.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NOV
+</td>
+<td style="text-align:left;">
+NOV Inc
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+15.03
+</td>
+<td style="text-align:right;">
+-1.59
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+24.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OKE
+</td>
+<td style="text-align:left;">
+ONEOK, Inc
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+57.52
+</td>
+<td style="text-align:right;">
+2.59
+</td>
+<td style="text-align:right;">
+22.23
+</td>
+<td style="text-align:right;">
+17.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OXY
+</td>
+<td style="text-align:left;">
+Occidental Petroleum Corporation
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+30.24
+</td>
+<td style="text-align:right;">
+-14.97
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+43.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PSX
+</td>
+<td style="text-align:left;">
+Phillips 66
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+82.70
+</td>
+<td style="text-align:right;">
+-4.88
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+41.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SLB
+</td>
+<td style="text-align:left;">
+Schlumberger Limited
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+31.19
+</td>
+<td style="text-align:right;">
+-2.05
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+26.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VLO
+</td>
+<td style="text-align:left;">
+Valero Energy Corporation
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+72.30
+</td>
+<td style="text-align:right;">
+-0.69
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+92.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WMB
+</td>
+<td style="text-align:left;">
+The Williams Companies, Inc
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+26.70
+</td>
+<td style="text-align:right;">
+0.95
+</td>
+<td style="text-align:right;">
+28.16
+</td>
+<td style="text-align:right;">
+21.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+XOM
+</td>
+<td style="text-align:left;">
+Exxon Mobil Corporation
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+61.23
+</td>
+<td style="text-align:right;">
+-4.47
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+17.70
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
