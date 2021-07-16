@@ -1,0 +1,84 @@
+---
+title: Unemployment Rate and Recessions
+---
+
+
+```{r updatedatabase, include=FALSE}
+# Update database.
+source("/base/inv/data/fred/01-fred2db.R")
+```
+
+```{r, include=FALSE}
+rm(list=ls())
+library(RSQLite)
+suppressMessages(library(ggplot2))
+suppressMessages(library(tidyverse))
+
+# Get the data.
+con <- dbConnect(SQLite(), dbname="/data/db")
+dat <- dbGetQuery(con, "select * from fred;")
+dbDisconnect(con)
+
+u <- data.frame(dat) %>%
+   filter(type == "unemployment") %>% 
+   mutate(date =  as.Date(date)) %>%
+   drop_na() %>% 
+   select(date, value) %>% 
+   rename(unemployment = value) %>% 
+   filter(date >= "2000-01-01")
+
+latest <- u %>% pull(date) %>% tail(1)
+earliest <- u %>% pull(date) %>% head(1)
+
+r <- data.frame(dat) %>%
+   filter(type == "recessions") %>% 
+   mutate(date =  as.Date(date)) %>%
+   drop_na() %>% 
+   select(date, value) %>% 
+   rename(recession = value) %>% 
+   filter(date <= latest & date >= earliest)
+
+```
+
+```{r, echo=FALSE}
+g <- ggplot(u, aes(x=date, y=unemployment)) +
+   geom_line() +
+   ylab("Unemployment Rate") +
+   xlab("Date") + 
+   labs(caption = paste("Updated: ", Sys.Date(), ".  ",
+                        "Most recent data: ", latest, sep=""))
+
+diffrec <- diff(r$recession)
+rec.start <- which(diffrec == 1)
+rec.end   <- which(diffrec == -1)
+
+# Is the first sample a recession?  
+# If so, pad the start dates.
+if (r$recession[1] == 1) {
+   rec.start <- c(1, rec.start)
+}
+
+# Is the last sample a recession?  
+# If so, pad the start dates.
+n <- length(r$recession)
+if (r$recession[n] == 1) {
+   rec.end <- c(rec.end, n)
+}
+
+dates <- r$date
+recessions <- data.frame(start = r$date[rec.start],
+                         end   = r$date[rec.end])
+                     
+g <- g + annotate("rect", 
+                  xmin = recessions$start, 
+                  xmax = recessions$end,
+                  ymin = -Inf,
+                  ymax = Inf,
+                  fill = 'blue',
+                  alpha = 0.1)
+g
+```
+
+```{r}
+
+```

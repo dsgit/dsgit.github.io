@@ -8,6 +8,8 @@ title: Home
    - [Gold Price](gold.html)
    - [Housing](housing.html)
    - [Inflation](inflation.html)
+   - [Unemployment](unemployment.html)
+   - [Manufacturing](manufacturing.html)
 2. Markets
    - [Large Capitalization Stocks](large.html)
    - [Style Comparison](styles.html)

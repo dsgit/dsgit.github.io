@@ -1,0 +1,51 @@
+---
+title: Manufacturing
+---
+
+
+```{r updatedatabase, include=FALSE}
+# Update database.
+load("/base/inv/data/fred/updated.rda")
+age <- difftime(Sys.time(), updated, units="mins")
+if (age > 30) { # Update the data if it is older than half an hour.
+   source("/base/inv/data/fred/01-fred2db.R")
+}
+```
+
+```{r, include=FALSE}
+rm(list=ls())
+library(RSQLite)
+suppressMessages(library(ggplot2))
+suppressMessages(library(tidyverse))
+
+# Get the data.
+con <- dbConnect(SQLite(), dbname="/data/db")
+dat <- dbGetQuery(con, "select * from fred;")
+dbDisconnect(con)
+
+m <- data.frame(dat) %>%
+   filter(type == "manufacturing") %>% 
+   mutate(date =  as.Date(date)) %>%
+   drop_na() %>% 
+   select(date, value) %>% 
+   filter(date >= "2000-01-01")
+
+latest <- max(m$date)
+```
+
+## Empire State Manufacturing Survey
+
+Current Business Conditions, Diffusion Index, Seasonally Adjusted.
+
+Source: [Saint Louis Fed](https://fred.stlouisfed.org/series/GACDINA066MNFRBNY)
+
+```{r, echo=FALSE}
+g <- ggplot(m, aes(x=date, y=value)) +
+   geom_line() +
+   ylab("Diffusion Index") +
+   xlab("Date") + 
+   labs(caption = paste("Updated: ", Sys.Date(), ".  ",
+                        "Most recent data: ", latest, sep=""))
+
+g
+```

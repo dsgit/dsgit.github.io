@@ -13,26 +13,51 @@ library(RSQLite)
 suppressMessages(library(ggplot2))
 suppressMessages(library(lubridate))
 suppressMessages(library(tidyverse))
-
+suppressMessages(library(TTR))
+suppressMessages(library(gridExtra))
 
 # Get the SP500 prices from the database.
 con <- dbConnect(SQLite(), dbname="/data/db")
-y   <- dbGetQuery(con, "select * from yInd where ticker = 'GSPC';")
+dat <- dbGetQuery(con, "select * from yInd where ticker = 'GSPC' or ticker = 'SPXEW';")
 dbDisconnect(con)
 
-# Use only recent data.
-y <- data.frame(y) %>% 
+# Compute technical indicators and retain only recent data.
+y <- data.frame(dat) %>% 
    select(-ticker) %>% 
+   mutate(rsi  = RSI(cl), macd = MACD(cl)[,"macd"]) %>% 
    mutate(date = as.Date(date)) %>% 
    filter(date >= "2020-01-01")
-latest <- y %>% pull(date) %>% tail(1)
+```
 
+```{r, echo=F, results='asis'}
+latest <- y %>% pull(date) %>% tail(1)
+datestr <- paste("Updated:", latest)
+cat(datestr)
 ```
+
+
 ```{r, largecap, echo=FALSE}
-ggplot(y, aes(x=date, y=ac)) + 
+p1 <- ggplot(y, aes(x=date, y=ac)) + 
    geom_line() +
-   ylab("Index Level") +
-   xlab("Date") + 
-   labs(caption = paste("Updated:", latest))
+   ylab("S&P 500 Index Level") +
+   xlab("") 
+p1
+
+p2 <- ggplot(y, aes(x=date, y=rsi)) + 
+   geom_line() +
+   xlab("") +
+   ylab("RSI(14)") +
+   geom_hline(yintercept=70, col="red") +
+   geom_hline(yintercept=30, col="blue")
+
+
+p3 <- ggplot(y, aes(x=date, y=macd)) + 
+   geom_line() +
+   xlab("Date") +
+   ylab("MACD(12,26)")
+
+
+grid.arrange(p2, p3, nrow=2)
 ```
+
 

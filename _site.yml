@@ -15,6 +15,10 @@ navbar:
         href: housing.html
       - text: "Inflation"
         href: inflation.html
+      - text: "Unemployment"
+        href: unemployment.html
+      - text: "Manufacturing"
+        href: manufacturing.html
     - text: "Markets"
       menu:
       - text: "Large Capitalization Stocks"
