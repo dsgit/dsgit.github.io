@@ -18,32 +18,57 @@ suppressMessages(library(ggplot2))
 con <- dbConnect(SQLite(), dbname="/data/db")
 y   <- dbGetQuery(con, "select * from currencies;")
 dbDisconnect(con)
-y <- y %>% data.frame() %>% mutate(date = as.Date(date))
+
+# Keep only data since 2017.
+y <- y %>% data.frame() %>% 
+   mutate(date = as.Date(date)) %>% 
+   filter(date >= "2017-01-01")
 latest <- y %>% pull(date) %>% tail(1)
-```
 
-```{r, include=FALSE}
-# Dollar trade-weighted index (Jan 2006 = 100)
-z <- y %>% filter(name == "USD") %>% filter(date >= "2017-01-01")
-```
-
-```{r, echo=FALSE}
-ggplot(z, aes(x=date, y=value)) + 
-   geom_line() +
-   ggtitle("United Stated Dollar Trade-Weighted Index (100 at January 2006)") + 
-   labs(caption = paste("Updated:", latest))
-```
-
-```{r, include=FALSE}
-# Dollar trade-weighted index (Jan 2006 = 100)
-z <- y %>% filter(name != "USD") %>% filter(date >= "2017-01-01")
+# Multiply yen value by 100 and kronor value by 10
+i <- y$name == "JPY"; y$value[i] <- 100 * y$value[i]
+i <- y$name == "SEK"; y$value[i] <- 10  * y$value[i]
 ```
 
 ```{r, echo=FALSE}
-ggplot(z, aes(x=date, y=value, col=name)) + 
+ggplot(y, aes(x=date, y=value, col=name)) + 
    geom_line() + 
-   ggtitle("One Currency Unit in United States Dollars.") +
+   ggtitle(
+      label    = "Value in United States Dollars of One Foreign Currency Unit.",
+      subtitle = "JPY value times 100. SEK value times 10.") +
    ylab("Rate") +
    xlab("Date")
 ```
 
+```{r, include=FALSE}
+# Normalize to have first value of 1.
+z <- y %>% 
+   arrange(date) %>%
+   group_by(name) %>%
+   mutate(value = value / first(value)) 
+```
+
+<!--
+```{r, echo=FALSE}
+ ggplot(z, aes(x=date, y=value, col=name)) + 
+    geom_line() + 
+    ggtitle("Normalized Value of One Foreign Currency Unit.") +
+    ylab("Rate") +
+    xlab("Date")
+```
+-->
+
+
+```{r, include=FALSE}
+# Compute my dollar index.
+x <- z %>% 
+   group_by(date) %>%
+   summarise(avg = sum(weight / value))
+```
+
+```{r, echo=FALSE}
+ggplot(x, aes(x=date, y=avg)) + 
+   geom_line(col = 'blue') +
+   ggtitle("United States Dollar Index") + 
+   labs(caption = paste("Updated:", latest))
+```
