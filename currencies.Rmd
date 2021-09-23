@@ -11,6 +11,7 @@ source("/base/inv/data/currencies/getData.R")
 library(RSQLite)
 suppressMessages(library(tidyverse))
 suppressMessages(library(ggplot2))
+suppressMessages(library(kableExtra))
 ```
 
 ```{r, include=FALSE}
@@ -25,9 +26,22 @@ y <- y %>% data.frame() %>%
    filter(date >= "2017-01-01")
 latest <- y %>% pull(date) %>% tail(1)
 
+# Wide version of the data
+z <- y %>% 
+   select(-weight) %>% 
+   pivot_wider(names_from=name, values_from=value, names_sort=TRUE) 
+
 # Multiply yen value by 100 and kronor value by 10
 i <- y$name == "JPY"; y$value[i] <- 100 * y$value[i]
 i <- y$name == "SEK"; y$value[i] <- 10  * y$value[i]
+```
+
+```{r, echo=FALSE, results='asis'}
+k <- kable(tail(z), 
+           booktabs = TRUE,
+           caption  = "Value in United States Dollars of One Foreign Currency Unit.",) %>% 
+   kable_styling(full_width = F)
+k
 ```
 
 ```{r, echo=FALSE}
