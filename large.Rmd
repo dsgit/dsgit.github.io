@@ -2,12 +2,6 @@
 title: Large Capitalization Stocks
 ---
 
-
-```{r, include=FALSE}
-# Update the stock indexes database.
-source("/base/inv/data/yahoo/indexes/ndx2db.R")
-```
-
 ```{r, include=FALSE}
 library(RSQLite)
 suppressMessages(library(ggplot2))
@@ -18,12 +12,12 @@ suppressMessages(library(gridExtra))
 
 # Get the SP500 prices from the database.
 con <- dbConnect(SQLite(), dbname="/data/db")
-dat <- dbGetQuery(con, "select * from yInd where ticker = 'GSPC' or ticker = 'SPXEW';")
+dat <- dbGetQuery(con, "select * from eIndexLevels where name = 'SP500';")
 dbDisconnect(con)
 
 # Compute technical indicators and retain only recent data.
 y <- data.frame(dat) %>% 
-   select(-ticker) %>% 
+   select(-name) %>% 
    mutate(rsi  = RSI(cl), macd = MACD(cl)[,"macd"]) %>% 
    mutate(date = as.Date(date)) %>% 
    filter(date >= "2020-01-01")
@@ -37,7 +31,7 @@ cat(datestr)
 
 
 ```{r, largecap, echo=FALSE}
-p1 <- ggplot(y, aes(x=date, y=ac)) + 
+p1 <- ggplot(y, aes(x=date, y=cl)) + 
    geom_line() +
    ylab("S&P 500 Index Level") +
    xlab("") 
