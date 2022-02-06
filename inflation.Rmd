@@ -57,5 +57,5 @@ d <- full_join(g,  r,  by="date") %>% slice_tail(n=6)
 
 ```{r, echo=FALSE, results='asis'}
 library(knitr)
-kable(d, caption="Recent CPI and Annual Change")
+kable(d, booktabs=TRUE, caption="Recent CPI and Annual Change") 
 ```

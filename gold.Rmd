@@ -10,7 +10,9 @@ suppressMessages(library(tidyverse))
 suppressMessages(library(kableExtra))
 options("getSymbols.warning4.0"=FALSE)
 
-g <- getSymbols("GOLDPMGBD228NLBM", src="FRED", auto.assign=F)
+g <- suppressWarnings(getSymbols("GC=F", src="yahoo", auto.assign=F))[,6]
+
+#g <- getSymbols("GOLDPMGBD228NLBM", src="FRED", auto.assign=F)
 colnames(g) <- "gold"
 g <- g["2017/"]
 
@@ -22,11 +24,11 @@ latest <- g %>% pull(date) %>% tail(1)
 ```
 
 ```{r, echo=FALSE, results='asis'}
-h <- g %>% 
-   column_to_rownames("date") %>% 
-   rename(price = gold) %>% 
+h <- g %>%
+   column_to_rownames("date") %>%
+   rename(price = gold) %>%
    slice_tail(n = 6)
-k <- kable(h, booktabs = TRUE) %>% kable_styling(full_width = F)
+k <- kable(h, booktabs=TRUE) %>% kable_styling(full_width = F)
 k
 ```
 
@@ -35,6 +37,6 @@ k
 ggplot(g, aes(x=date, y=gold)) +
    geom_line() +
    ylab("Gold Price") +
-   xlab("Date") + 
+   xlab("Date") +
    labs(caption = paste("Updated:", latest))
 ```
