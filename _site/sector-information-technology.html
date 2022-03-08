@@ -13,7 +13,7 @@
 
 <title>Information Technology Sector</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -235,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,7 +249,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -275,7 +279,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Markets
      
     <span class="caret"></span>
@@ -296,7 +300,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sectors
      
     <span class="caret"></span>
@@ -364,7 +368,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Updated: 2022-02-19</p>
+<p>Updated: 2022-03-06</p>
 <br>
 <br>
 <div id="largest-capitalization-stocks" class="section level2">
@@ -392,7 +396,7 @@ AAPL
 Apple Inc
 </td>
 <td style="text-align:right;">
-2756
+2663
 </td>
 </tr>
 <tr>
@@ -403,7 +407,7 @@ MSFT
 Microsoft Corporation
 </td>
 <td style="text-align:right;">
-2180
+2173
 </td>
 </tr>
 <tr>
@@ -414,7 +418,7 @@ NVDA
 NVIDIA Corporation
 </td>
 <td style="text-align:right;">
-589
+572
 </td>
 </tr>
 <tr>
@@ -425,7 +429,7 @@ V
 Visa Inc
 </td>
 <td style="text-align:right;">
-471
+434
 </td>
 </tr>
 <tr>
@@ -436,7 +440,7 @@ MA
 Mastercard Incorporated
 </td>
 <td style="text-align:right;">
-364
+326
 </td>
 </tr>
 </tbody>
@@ -466,27 +470,13 @@ Period
 <tbody>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-GLW
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Corning Incorporated
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-18.94
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
 SEDG
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 SolarEdge Technologies Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-17.07
+23.07
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -494,13 +484,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-DXC
+LDOS
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-DXC Technology Company
+Leidos Holdings Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-16.63
+20.93
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -508,13 +498,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-MPWR
+ENPH
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Monolithic Power Systems Inc
+Enphase Energy Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-15.08
+11.98
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -522,13 +512,27 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-STX
+JKHY
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Seagate Technology Holdings plc
+Jack Henry &amp; Associates Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-13.74
+10.32
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+FTNT
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Fortinet Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.72
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -536,13 +540,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-PYPL
+EPAM
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-PayPal Holdings Inc
+EPAM Systems Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--36.62
+-56.24
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -550,13 +554,13 @@ bottom monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-TER
+IPGP
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Teradyne Inc
+IPG Photonics Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--19.84
+-29.84
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -570,150 +574,10 @@ ZBRA
 Zebra Technologies Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--14.95
+-21.64
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-FIS
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Fidelity National Information Services Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--14.44
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-INTC
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Intel Corporation
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--12.79
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-MPWR
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Monolithic Power Systems Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-7.79
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-CSCO
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Cisco Systems Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-6.14
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-QRVO
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Qorvo Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-4.68
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-LDOS
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Leidos Holdings Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-4.52
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-ADI
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Analog Devices Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-4.20
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-FIS
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Fidelity National Information Services Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--14.55
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-TYL
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Tyler Technologies Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--12.06
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-INTU
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Intuit Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--10.19
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
 </td>
 </tr>
 <tr>
@@ -724,7 +588,105 @@ PYPL
 PayPal Holdings Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--10.10
+-20.76
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+FIS
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Fidelity National Information Services Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-20.47
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+LDOS
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Leidos Holdings Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+10.87
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+AKAM
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Akamai Technologies Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.85
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+HPQ
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+HP Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+5.52
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+SEDG
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+SolarEdge Technologies Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+5.50
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+JKHY
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Jack Henry &amp; Associates Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+5.27
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+EPAM
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+EPAM Systems Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-48.09
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -732,13 +694,55 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-AKAM
+IPGP
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Akamai Technologies Inc
+IPG Photonics Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--9.73
+-23.80
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+DXC
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+DXC Technology Company
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-15.56
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+AMD
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Advanced Micro Devices Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-10.45
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+MA
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Mastercard Incorporated
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-10.39
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -786,42 +790,19 @@ AAPL
 Apple Inc
 </td>
 <td style="text-align:right;">
-2756
+2663
 </td>
 <td style="text-align:right;">
-167.30
+163.17
 </td>
 <td style="text-align:right;">
 6.02
 </td>
 <td style="text-align:right;">
-28.08
+27.13
 </td>
 <td style="text-align:right;">
-28.25
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ADI
-</td>
-<td style="text-align:left;">
-Analog Devices Inc
-</td>
-<td style="text-align:right;">
-84
-</td>
-<td style="text-align:right;">
-160.36
-</td>
-<td style="text-align:right;">
-2.91
-</td>
-<td style="text-align:right;">
-55.15
-</td>
-<td style="text-align:right;">
-22.32
+27.55
 </td>
 </tr>
 <tr>
@@ -832,42 +813,42 @@ AKAM
 Akamai Technologies Inc
 </td>
 <td style="text-align:right;">
-16
+18
 </td>
 <td style="text-align:right;">
-100.33
+112.55
 </td>
 <td style="text-align:right;">
 3.93
 </td>
 <td style="text-align:right;">
-25.53
+28.64
 </td>
 <td style="text-align:right;">
-17.67
+18.21
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-CSCO
+AMD
 </td>
 <td style="text-align:left;">
-Cisco Systems Inc
+Advanced Micro Devices Inc
 </td>
 <td style="text-align:right;">
-235
+176
 </td>
 <td style="text-align:right;">
-57.21
+108.41
 </td>
 <td style="text-align:right;">
-2.80
+2.57
 </td>
 <td style="text-align:right;">
-19.92
+42.18
 </td>
 <td style="text-align:right;">
-15.87
+29.85
 </td>
 </tr>
 <tr>
@@ -878,19 +859,65 @@ DXC
 DXC Technology Company
 </td>
 <td style="text-align:right;">
-9
+7
 </td>
 <td style="text-align:right;">
-35.62
+30.00
 </td>
 <td style="text-align:right;">
--2.43
+-2.41
 </td>
 <td style="text-align:right;">
-442.31
+NA
 </td>
 <td style="text-align:right;">
-8.63
+8.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ENPH
+</td>
+<td style="text-align:left;">
+Enphase Energy Inc
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+158.15
+</td>
+<td style="text-align:right;">
+1.02
+</td>
+<td style="text-align:right;">
+155.20
+</td>
+<td style="text-align:right;">
+50.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EPAM
+</td>
+<td style="text-align:left;">
+EPAM Systems Inc
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+198.52
+</td>
+<td style="text-align:right;">
+8.15
+</td>
+<td style="text-align:right;">
+24.36
+</td>
+<td style="text-align:right;">
+46.30
 </td>
 </tr>
 <tr>
@@ -901,88 +928,111 @@ FIS
 Fidelity National Information Services Inc
 </td>
 <td style="text-align:right;">
-58
+55
 </td>
 <td style="text-align:right;">
-95.64
+90.47
 </td>
 <td style="text-align:right;">
 0.67
 </td>
 <td style="text-align:right;">
-142.75
+135.03
 </td>
 <td style="text-align:right;">
-14.08
+13.05
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-GLW
+FTNT
 </td>
 <td style="text-align:left;">
-Corning Incorporated
+Fortinet Inc
 </td>
 <td style="text-align:right;">
-35
+54
 </td>
 <td style="text-align:right;">
-41.70
+335.46
 </td>
 <td style="text-align:right;">
-1.28
+3.63
 </td>
 <td style="text-align:right;">
-32.58
+92.41
 </td>
 <td style="text-align:right;">
-17.45
+66.23
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-INTC
+HPQ
 </td>
 <td style="text-align:left;">
-Intel Corporation
+HP Inc
 </td>
 <td style="text-align:right;">
-183
+38
 </td>
 <td style="text-align:right;">
-45.04
+36.35
 </td>
 <td style="text-align:right;">
-4.86
+5.57
 </td>
 <td style="text-align:right;">
-9.27
+6.53
 </td>
 <td style="text-align:right;">
-14.10
+8.04
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-INTU
+IPGP
 </td>
 <td style="text-align:left;">
-Intuit Inc
+IPG Photonics Corporation
 </td>
 <td style="text-align:right;">
-136
+6
 </td>
 <td style="text-align:right;">
-481.20
+105.20
 </td>
 <td style="text-align:right;">
-7.58
+5.16
 </td>
 <td style="text-align:right;">
-63.47
+20.39
 </td>
 <td style="text-align:right;">
-45.25
+25.45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+JKHY
+</td>
+<td style="text-align:left;">
+Jack Henry &amp; Associates Inc
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+185.33
+</td>
+<td style="text-align:right;">
+4.66
+</td>
+<td style="text-align:right;">
+39.77
+</td>
+<td style="text-align:right;">
+37.45
 </td>
 </tr>
 <tr>
@@ -993,19 +1043,19 @@ LDOS
 Leidos Holdings Inc
 </td>
 <td style="text-align:right;">
-13
+15
 </td>
 <td style="text-align:right;">
-93.01
+107.71
 </td>
 <td style="text-align:right;">
 5.27
 </td>
 <td style="text-align:right;">
-17.42
+20.44
 </td>
 <td style="text-align:right;">
-11.99
+14.45
 </td>
 </tr>
 <tr>
@@ -1016,42 +1066,19 @@ MA
 Mastercard Incorporated
 </td>
 <td style="text-align:right;">
-364
+326
 </td>
 <td style="text-align:right;">
-369.95
+330.76
 </td>
 <td style="text-align:right;">
 8.76
 </td>
 <td style="text-align:right;">
-42.23
+37.76
 </td>
 <td style="text-align:right;">
-35.59
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-MPWR
-</td>
-<td style="text-align:left;">
-Monolithic Power Systems Inc
-</td>
-<td style="text-align:right;">
-21
-</td>
-<td style="text-align:right;">
-457.35
-</td>
-<td style="text-align:right;">
-5.05
-</td>
-<td style="text-align:right;">
-90.56
-</td>
-<td style="text-align:right;">
-45.25
+35.21
 </td>
 </tr>
 <tr>
@@ -1062,19 +1089,19 @@ MSFT
 Microsoft Corporation
 </td>
 <td style="text-align:right;">
-2180
+2173
 </td>
 <td style="text-align:right;">
-287.93
+289.86
 </td>
 <td style="text-align:right;">
 9.39
 </td>
 <td style="text-align:right;">
-30.96
+30.87
 </td>
 <td style="text-align:right;">
-32.26
+32.47
 </td>
 </tr>
 <tr>
@@ -1085,19 +1112,19 @@ NVDA
 NVIDIA Corporation
 </td>
 <td style="text-align:right;">
-589
+572
 </td>
 <td style="text-align:right;">
-236.42
+229.36
 </td>
 <td style="text-align:right;">
 3.85
 </td>
 <td style="text-align:right;">
-61.41
+59.57
 </td>
 <td style="text-align:right;">
-51.55
+43.67
 </td>
 </tr>
 <tr>
@@ -1108,42 +1135,19 @@ PYPL
 PayPal Holdings Inc
 </td>
 <td style="text-align:right;">
-121
+116
 </td>
 <td style="text-align:right;">
-103.65
+99.91
 </td>
 <td style="text-align:right;">
 3.52
 </td>
 <td style="text-align:right;">
-29.58
+28.38
 </td>
 <td style="text-align:right;">
-24.57
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-QRVO
-</td>
-<td style="text-align:left;">
-Qorvo Inc
-</td>
-<td style="text-align:right;">
-15
-</td>
-<td style="text-align:right;">
-133.20
-</td>
-<td style="text-align:right;">
-9.89
-</td>
-<td style="text-align:right;">
-13.36
-</td>
-<td style="text-align:right;">
-10.05
+23.92
 </td>
 </tr>
 <tr>
@@ -1154,88 +1158,19 @@ SEDG
 SolarEdge Technologies Inc
 </td>
 <td style="text-align:right;">
-14
+15
 </td>
 <td style="text-align:right;">
-257.91
+293.23
 </td>
 <td style="text-align:right;">
 3.06
 </td>
 <td style="text-align:right;">
-84.98
+95.80
 </td>
 <td style="text-align:right;">
-43.48
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-STX
-</td>
-<td style="text-align:left;">
-Seagate Technology Holdings plc
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-108.64
-</td>
-<td style="text-align:right;">
-7.93
-</td>
-<td style="text-align:right;">
-14.01
-</td>
-<td style="text-align:right;">
-11.96
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-TER
-</td>
-<td style="text-align:left;">
-Teradyne Inc
-</td>
-<td style="text-align:right;">
-19
-</td>
-<td style="text-align:right;">
-114.83
-</td>
-<td style="text-align:right;">
-5.56
-</td>
-<td style="text-align:right;">
-20.65
-</td>
-<td style="text-align:right;">
-23.47
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-TYL
-</td>
-<td style="text-align:left;">
-Tyler Technologies Inc
-</td>
-<td style="text-align:right;">
-18
-</td>
-<td style="text-align:right;">
-411.28
-</td>
-<td style="text-align:right;">
-3.83
-</td>
-<td style="text-align:right;">
-91.36
-</td>
-<td style="text-align:right;">
-57.14
+50.76
 </td>
 </tr>
 <tr>
@@ -1246,19 +1181,19 @@ V
 Visa Inc
 </td>
 <td style="text-align:right;">
-471
+434
 </td>
 <td style="text-align:right;">
-222.69
+200.29
 </td>
 <td style="text-align:right;">
-5.03
+6.04
 </td>
 <td style="text-align:right;">
-47.35
+33.18
 </td>
 <td style="text-align:right;">
-31.55
+30.67
 </td>
 </tr>
 <tr>
@@ -1269,19 +1204,19 @@ ZBRA
 Zebra Technologies Corporation
 </td>
 <td style="text-align:right;">
-22
+21
 </td>
 <td style="text-align:right;">
-420.31
+394.24
 </td>
 <td style="text-align:right;">
 15.52
 </td>
 <td style="text-align:right;">
-27.08
+25.40
 </td>
 <td style="text-align:right;">
-21.32
+20.92
 </td>
 </tr>
 </tbody>

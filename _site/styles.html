@@ -13,7 +13,7 @@
 
 <title>Style Comparison</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -243,7 +247,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -273,7 +277,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Markets
      
     <span class="caret"></span>
@@ -294,7 +298,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sectors
      
     <span class="caret"></span>
@@ -403,22 +407,22 @@ SV
 Small Value
 </td>
 <td style="text-align:right;">
--3.8
+-0.4
 </td>
 <td style="text-align:right;">
--8.4
+-6.1
 </td>
 <td style="text-align:right;">
-0.8
+-4.6
 </td>
 <td style="text-align:right;">
-6.7
+-2.1
 </td>
 <td style="text-align:right;">
-29.8
+50.2
 </td>
 <td style="text-align:right;">
-33.6
+37.4
 </td>
 </tr>
 <tr>
@@ -429,22 +433,22 @@ SG
 Small Growth
 </td>
 <td style="text-align:right;">
--4.5
+-4.8
 </td>
 <td style="text-align:right;">
--20.9
+-19.6
 </td>
 <td style="text-align:right;">
--13.5
+-22.0
 </td>
 <td style="text-align:right;">
--22.1
+-18.1
 </td>
 <td style="text-align:right;">
-12.5
+24.6
 </td>
 <td style="text-align:right;">
-28.1
+26.3
 </td>
 </tr>
 <tr>
@@ -455,22 +459,22 @@ LV
 Large Value
 </td>
 <td style="text-align:right;">
--3.3
+-3.9
 </td>
 <td style="text-align:right;">
--1.9
+-3.2
 </td>
 <td style="text-align:right;">
-1.5
+-1.2
 </td>
 <td style="text-align:right;">
-14.0
+8.5
 </td>
 <td style="text-align:right;">
-22.5
+37.4
 </td>
 <td style="text-align:right;">
-40.6
+39.8
 </td>
 </tr>
 <tr>
@@ -481,22 +485,22 @@ LG
 Large Growth
 </td>
 <td style="text-align:right;">
--6.3
+-8.9
 </td>
 <td style="text-align:right;">
--14.1
+-17.7
 </td>
 <td style="text-align:right;">
--4.9
+-14.3
 </td>
 <td style="text-align:right;">
-5.6
+9.4
 </td>
 <td style="text-align:right;">
-40.6
+50.0
 </td>
 <td style="text-align:right;">
-85.1
+76.6
 </td>
 </tr>
 </tbody>

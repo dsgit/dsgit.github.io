@@ -13,7 +13,7 @@
 
 <title>Materials Sector</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -235,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,7 +249,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -275,7 +279,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Markets
      
     <span class="caret"></span>
@@ -296,7 +300,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sectors
      
     <span class="caret"></span>
@@ -364,7 +368,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Updated: 2022-02-19</p>
+<p>Updated: 2022-03-06</p>
 <br>
 <br>
 <div id="largest-capitalization-stocks" class="section level2">
@@ -392,18 +396,7 @@ LIN
 Linde plc
 </td>
 <td style="text-align:right;">
-153
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SHW
-</td>
-<td style="text-align:left;">
-The Sherwin-Williams Company
-</td>
-<td style="text-align:right;">
-70
+143
 </td>
 </tr>
 <tr>
@@ -414,18 +407,18 @@ FCX
 Freeport-McMoRan Inc
 </td>
 <td style="text-align:right;">
-63
+73
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-APD
+SHW
 </td>
 <td style="text-align:left;">
-Air Products and Chemicals Inc
+The Sherwin-Williams Company
 </td>
 <td style="text-align:right;">
-54
+67
 </td>
 </tr>
 <tr>
@@ -436,7 +429,18 @@ NEM
 Newmont Corporation
 </td>
 <td style="text-align:right;">
-54
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+APD
+</td>
+<td style="text-align:left;">
+Air Products and Chemicals Inc
+</td>
+<td style="text-align:right;">
+51
 </td>
 </tr>
 </tbody>
@@ -466,27 +470,13 @@ Period
 <tbody>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-NUE
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Nucor Corporation
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-32.11
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
 MOS
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 The Mosaic Company
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-14.47
+36.80
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -494,13 +484,27 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-CTVA
+FCX
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Corteva Inc
+Freeport-McMoRan Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-11.58
+30.43
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+NUE
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Nucor Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+24.68
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -514,7 +518,7 @@ CF
 CF Industries Holdings Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-11.45
+22.05
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -522,13 +526,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-PKG
+NEM
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Packaging Corporation of America
+Newmont Corporation
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-10.37
+21.91
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -536,13 +540,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-APD
+PPG
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Air Products and Chemicals Inc
+PPG Industries Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--14.34
+-18.67
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -556,7 +560,7 @@ ALB
 Albemarle Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--10.34
+-17.10
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -564,13 +568,13 @@ bottom monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CE
+APD
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Celanese Corporation
+Air Products and Chemicals Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--10.21
+-13.17
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -584,7 +588,7 @@ AVY
 Avery Dennison Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--9.91
+-11.13
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -592,13 +596,13 @@ bottom monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-SHW
+ECL
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-The Sherwin-Williams Company
+Ecolab Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--8.46
+-10.33
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -606,13 +610,27 @@ bottom monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-SEE
+MOS
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Sealed Air Corporation
+The Mosaic Company
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-8.81
+21.06
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+CF
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+CF Industries Holdings Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+14.78
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top weekly
@@ -626,7 +644,21 @@ NEM
 Newmont Corporation
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-5.97
+9.40
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+FCX
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Freeport-McMoRan Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+8.14
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top weekly
@@ -640,35 +672,7 @@ NUE
 Nucor Corporation
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-3.82
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-LIN
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Linde plc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-2.76
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-AMCR
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Amcor plc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-2.50
+6.67
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top weekly
@@ -676,13 +680,13 @@ top weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-ALB
+PPG
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Albemarle Corporation
+PPG Industries Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--17.38
+-12.15
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -690,13 +694,13 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CE
+IFF
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Celanese Corporation
+International Flavors &amp; Fragrances Inc. 
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--7.28
+-11.51
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -704,27 +708,13 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CF
+IP
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CF Industries Holdings Inc
+International Paper Company
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--4.15
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-MOS
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-The Mosaic Company
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--3.99
+-7.07
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -738,7 +728,21 @@ ECL
 Ecolab Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--3.13
+-6.76
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+ALB
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Albemarle Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-6.71
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -786,42 +790,19 @@ ALB
 Albemarle Corporation
 </td>
 <td style="text-align:right;">
-22
+21
 </td>
 <td style="text-align:right;">
-190.76
+179.07
 </td>
 <td style="text-align:right;">
 1.06
 </td>
 <td style="text-align:right;">
-179.96
+168.93
 </td>
 <td style="text-align:right;">
-43.48
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AMCR
-</td>
-<td style="text-align:left;">
-Amcor plc
-</td>
-<td style="text-align:right;">
-18
-</td>
-<td style="text-align:right;">
-11.88
-</td>
-<td style="text-align:right;">
-0.62
-</td>
-<td style="text-align:right;">
-19.11
-</td>
-<td style="text-align:right;">
-14.47
+32.57
 </td>
 </tr>
 <tr>
@@ -832,19 +813,19 @@ APD
 Air Products and Chemicals Inc
 </td>
 <td style="text-align:right;">
-54
+51
 </td>
 <td style="text-align:right;">
-241.97
+228.43
 </td>
 <td style="text-align:right;">
 9.79
 </td>
 <td style="text-align:right;">
-24.72
+23.33
 </td>
 <td style="text-align:right;">
-23.64
+23.36
 </td>
 </tr>
 <tr>
@@ -855,42 +836,19 @@ AVY
 Avery Dennison Corporation
 </td>
 <td style="text-align:right;">
-15
+14
 </td>
 <td style="text-align:right;">
-180.87
+167.59
 </td>
 <td style="text-align:right;">
 8.83
 </td>
 <td style="text-align:right;">
-20.48
+18.98
 </td>
 <td style="text-align:right;">
-18.90
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-CE
-</td>
-<td style="text-align:left;">
-Celanese Corporation
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-144.25
-</td>
-<td style="text-align:right;">
-16.86
-</td>
-<td style="text-align:right;">
-8.55
-</td>
-<td style="text-align:right;">
-9.40
+18.73
 </td>
 </tr>
 <tr>
@@ -901,42 +859,19 @@ CF
 CF Industries Holdings Inc
 </td>
 <td style="text-align:right;">
-16
+19
 </td>
 <td style="text-align:right;">
-73.27
+91.25
 </td>
 <td style="text-align:right;">
 4.24
 </td>
 <td style="text-align:right;">
-17.28
+21.52
 </td>
 <td style="text-align:right;">
-6.05
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-CTVA
-</td>
-<td style="text-align:left;">
-Corteva Inc
-</td>
-<td style="text-align:right;">
-37
-</td>
-<td style="text-align:right;">
-50.70
-</td>
-<td style="text-align:right;">
-2.37
-</td>
-<td style="text-align:right;">
-21.64
-</td>
-<td style="text-align:right;">
-21.37
+6.15
 </td>
 </tr>
 <tr>
@@ -947,19 +882,19 @@ ECL
 Ecolab Inc
 </td>
 <td style="text-align:right;">
-51
+48
 </td>
 <td style="text-align:right;">
-178.64
+168.11
 </td>
 <td style="text-align:right;">
 3.91
 </td>
 <td style="text-align:right;">
-45.69
+42.99
 </td>
 <td style="text-align:right;">
-30.58
+33.56
 </td>
 </tr>
 <tr>
@@ -970,19 +905,65 @@ FCX
 Freeport-McMoRan Inc
 </td>
 <td style="text-align:right;">
-63
+73
 </td>
 <td style="text-align:right;">
-43.02
+50.11
 </td>
 <td style="text-align:right;">
 2.90
 </td>
 <td style="text-align:right;">
-14.83
+17.28
 </td>
 <td style="text-align:right;">
-12.38
+13.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IFF
+</td>
+<td style="text-align:left;">
+International Flavors &amp; Fragrances Inc. 
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+123.50
+</td>
+<td style="text-align:right;">
+1.10
+</td>
+<td style="text-align:right;">
+112.27
+</td>
+<td style="text-align:right;">
+24.15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IP
+</td>
+<td style="text-align:left;">
+International Paper Company
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+42.21
+</td>
+<td style="text-align:right;">
+4.47
+</td>
+<td style="text-align:right;">
+9.45
+</td>
+<td style="text-align:right;">
+9.87
 </td>
 </tr>
 <tr>
@@ -993,19 +974,19 @@ LIN
 Linde plc
 </td>
 <td style="text-align:right;">
-153
+143
 </td>
 <td style="text-align:right;">
-302.86
+281.43
 </td>
 <td style="text-align:right;">
-7.34
+7.33
 </td>
 <td style="text-align:right;">
-38.75
+38.39
 </td>
 <td style="text-align:right;">
-24.81
+25.06
 </td>
 </tr>
 <tr>
@@ -1016,19 +997,19 @@ MOS
 The Mosaic Company
 </td>
 <td style="text-align:right;">
-17
+22
 </td>
 <td style="text-align:right;">
-45.00
+59.83
 </td>
 <td style="text-align:right;">
-4.65
+4.27
 </td>
 <td style="text-align:right;">
-21.00
+14.01
 </td>
 <td style="text-align:right;">
-4.65
+5.26
 </td>
 </tr>
 <tr>
@@ -1039,19 +1020,19 @@ NEM
 Newmont Corporation
 </td>
 <td style="text-align:right;">
-54
+59
 </td>
 <td style="text-align:right;">
-67.67
+74.28
 </td>
 <td style="text-align:right;">
-2.54
+1.46
 </td>
 <td style="text-align:right;">
-26.67
+50.91
 </td>
 <td style="text-align:right;">
-18.45
+19.42
 </td>
 </tr>
 <tr>
@@ -1062,65 +1043,42 @@ NUE
 Nucor Corporation
 </td>
 <td style="text-align:right;">
-35
+37
 </td>
 <td style="text-align:right;">
-122.93
+138.72
 </td>
 <td style="text-align:right;">
--99999.99
+23.16
 </td>
 <td style="text-align:right;">
-32.53
+5.99
 </td>
 <td style="text-align:right;">
-5.54
+6.14
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-PKG
+PPG
 </td>
 <td style="text-align:left;">
-Packaging Corporation of America
+PPG Industries Inc
 </td>
 <td style="text-align:right;">
-14
+29
 </td>
 <td style="text-align:right;">
-148.47
+123.95
 </td>
 <td style="text-align:right;">
-8.83
+6.01
 </td>
 <td style="text-align:right;">
-16.81
+20.63
 </td>
 <td style="text-align:right;">
-15.65
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SEE
-</td>
-<td style="text-align:left;">
-Sealed Air Corporation
-</td>
-<td style="text-align:right;">
-10
-</td>
-<td style="text-align:right;">
-69.31
-</td>
-<td style="text-align:right;">
-3.04
-</td>
-<td style="text-align:right;">
-17.29
-</td>
-<td style="text-align:right;">
-15.85
+19.23
 </td>
 </tr>
 <tr>
@@ -1131,19 +1089,19 @@ SHW
 The Sherwin-Williams Company
 </td>
 <td style="text-align:right;">
-70
+67
 </td>
 <td style="text-align:right;">
-268.07
+258.49
 </td>
 <td style="text-align:right;">
 6.98
 </td>
 <td style="text-align:right;">
-38.41
+37.03
 </td>
 <td style="text-align:right;">
-28.65
+28.17
 </td>
 </tr>
 </tbody>

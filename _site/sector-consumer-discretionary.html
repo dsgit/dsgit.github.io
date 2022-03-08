@@ -13,7 +13,7 @@
 
 <title>Consumer Discretionary Sector</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -235,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,7 +249,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -275,7 +279,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Markets
      
     <span class="caret"></span>
@@ -296,7 +300,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sectors
      
     <span class="caret"></span>
@@ -364,7 +368,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Updated: 2022-02-19</p>
+<p>Updated: 2022-03-06</p>
 <br>
 <br>
 <div id="largest-capitalization-stocks" class="section level2">
@@ -392,7 +396,7 @@ AMZN
 Amazon.com Inc
 </td>
 <td style="text-align:right;">
-1553
+1482
 </td>
 </tr>
 <tr>
@@ -403,7 +407,7 @@ TSLA
 Tesla Inc
 </td>
 <td style="text-align:right;">
-886
+866
 </td>
 </tr>
 <tr>
@@ -414,7 +418,7 @@ HD
 The Home Depot Inc
 </td>
 <td style="text-align:right;">
-366
+339
 </td>
 </tr>
 <tr>
@@ -425,7 +429,7 @@ NKE
 NIKE Inc
 </td>
 <td style="text-align:right;">
-226
+207
 </td>
 </tr>
 <tr>
@@ -436,7 +440,7 @@ MCD
 McDonald’s Corporation
 </td>
 <td style="text-align:right;">
-187
+175
 </td>
 </tr>
 </tbody>
@@ -466,13 +470,13 @@ Period
 <tbody>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-EXPE
+ETSY
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Expedia Group Inc
+Etsy Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-19.92
+13.39
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -480,13 +484,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-RL
+NWL
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Ralph Lauren Corporation
+Newell Brands Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-16.66
+9.59
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -494,13 +498,13 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-PENN
+BBY
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Penn National Gaming Inc
+Best Buy Co. Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-15.52
+9.57
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -514,7 +518,7 @@ DLTR
 Dollar Tree Inc
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-13.16
+7.48
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -522,58 +526,16 @@ top monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-NWL
+TGT
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-Newell Brands Inc
+Target Corporation
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-12.43
+5.15
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-ETSY
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Etsy Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--14.48
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-VFC
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-V.F. Corporation
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--12.99
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-F
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Ford Motor Company
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--12.19
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
 </td>
 </tr>
 <tr>
@@ -584,7 +546,7 @@ UAA
 Under Armour Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--11.88
+-22.02
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
@@ -592,100 +554,44 @@ bottom monthly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-UA
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-Under Armour Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--10.13
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-EXPE
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Expedia Group Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-8.87
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-NWL
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Newell Brands Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-6.03
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
 APTV
 </td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
+<td style="text-align:left;background-color: #ffebeb !important;">
 Aptiv PLC
 </td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-5.34
+<td style="text-align:right;background-color: #ffebeb !important;">
+-19.92
 </td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-WHR
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Whirlpool Corporation
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-4.53
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-LVS
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Las Vegas Sands Corp
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-4.34
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
 </td>
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-ETSY
+BKNG
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Etsy Inc
+Booking Holdings Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--10.21
+-18.74
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PVH
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PVH Corp
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-17.88
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
 </td>
 </tr>
 <tr>
@@ -696,7 +602,91 @@ LKQ
 LKQ Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--8.44
+-17.85
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+TGT
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Target Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+12.49
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+BBY
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Best Buy Co. Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+10.72
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+TSCO
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Tractor Supply Company
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+10.59
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+DG
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Dollar General Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.03
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+POOL
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Pool Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+3.65
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+APTV
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Aptiv PLC
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-22.15
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -704,13 +694,13 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-GRMN
+PVH
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Garmin Ltd
+PVH Corp
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--7.07
+-21.00
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -718,13 +708,27 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-UA
+CCL
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-Under Armour Inc
+Carnival Corporation &amp; plc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--5.86
+-18.34
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+RCL
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Royal Caribbean Group
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-16.91
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -738,7 +742,7 @@ UAA
 Under Armour Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--5.54
+-14.08
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -786,19 +790,19 @@ AMZN
 Amazon.com Inc
 </td>
 <td style="text-align:right;">
-1553
+1482
 </td>
 <td style="text-align:right;">
-3052.03
+2912.82
 </td>
 <td style="text-align:right;">
 64.81
 </td>
 <td style="text-align:right;">
-47.09
+44.94
 </td>
 <td style="text-align:right;">
-52.36
+52.91
 </td>
 </tr>
 <tr>
@@ -809,19 +813,111 @@ APTV
 Aptiv PLC
 </td>
 <td style="text-align:right;">
-38
+29
 </td>
 <td style="text-align:right;">
-141.15
+105.87
 </td>
 <td style="text-align:right;">
 1.94
 </td>
 <td style="text-align:right;">
-72.76
+54.57
 </td>
 <td style="text-align:right;">
-31.45
+31.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BBY
+</td>
+<td style="text-align:left;">
+Best Buy Co. Inc
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+106.10
+</td>
+<td style="text-align:right;">
+9.84
+</td>
+<td style="text-align:right;">
+10.78
+</td>
+<td style="text-align:right;">
+10.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BKNG
+</td>
+<td style="text-align:left;">
+Booking Holdings Inc
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+1985.04
+</td>
+<td style="text-align:right;">
+28.17
+</td>
+<td style="text-align:right;">
+70.47
+</td>
+<td style="text-align:right;">
+25.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CCL
+</td>
+<td style="text-align:left;">
+Carnival Corporation &amp; plc
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+17.23
+</td>
+<td style="text-align:right;">
+-8.46
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+33.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DG
+</td>
+<td style="text-align:left;">
+Dollar General Corporation
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+210.98
+</td>
+<td style="text-align:right;">
+10.23
+</td>
+<td style="text-align:right;">
+20.62
+</td>
+<td style="text-align:right;">
+17.79
 </td>
 </tr>
 <tr>
@@ -835,16 +931,16 @@ Dollar Tree Inc
 32
 </td>
 <td style="text-align:right;">
-142.84
+143.47
 </td>
 <td style="text-align:right;">
-5.94
+5.80
 </td>
 <td style="text-align:right;">
-24.04
+24.74
 </td>
 <td style="text-align:right;">
-17.01
+17.48
 </td>
 </tr>
 <tr>
@@ -855,88 +951,19 @@ ETSY
 Etsy Inc
 </td>
 <td style="text-align:right;">
-17
+19
 </td>
 <td style="text-align:right;">
-127.30
+151.57
 </td>
 <td style="text-align:right;">
-3.37
+3.40
 </td>
 <td style="text-align:right;">
-39.57
+44.61
 </td>
 <td style="text-align:right;">
-34.84
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-EXPE
-</td>
-<td style="text-align:left;">
-Expedia Group Inc
-</td>
-<td style="text-align:right;">
-33
-</td>
-<td style="text-align:right;">
-209.17
-</td>
-<td style="text-align:right;">
--1.80
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-31.45
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-Ford Motor Company
-</td>
-<td style="text-align:right;">
-72
-</td>
-<td style="text-align:right;">
-18.04
-</td>
-<td style="text-align:right;">
-4.43
-</td>
-<td style="text-align:right;">
-3.64
-</td>
-<td style="text-align:right;">
-8.38
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-GRMN
-</td>
-<td style="text-align:left;">
-Garmin Ltd
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-114.52
-</td>
-<td style="text-align:right;">
-5.61
-</td>
-<td style="text-align:right;">
-20.41
-</td>
-<td style="text-align:right;">
-19.92
+35.97
 </td>
 </tr>
 <tr>
@@ -947,19 +974,19 @@ HD
 The Home Depot Inc
 </td>
 <td style="text-align:right;">
-366
+339
 </td>
 <td style="text-align:right;">
-346.87
+324.26
 </td>
 <td style="text-align:right;">
-14.95
+15.53
 </td>
 <td style="text-align:right;">
-26.24
+20.88
 </td>
 <td style="text-align:right;">
-22.57
+20.16
 </td>
 </tr>
 <tr>
@@ -970,42 +997,19 @@ LKQ
 LKQ Corporation
 </td>
 <td style="text-align:right;">
-14
+13
 </td>
 <td style="text-align:right;">
-49.17
+44.95
 </td>
 <td style="text-align:right;">
 3.67
 </td>
 <td style="text-align:right;">
-13.41
+12.24
 </td>
 <td style="text-align:right;">
-13.28
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-LVS
-</td>
-<td style="text-align:left;">
-Las Vegas Sands Corp
-</td>
-<td style="text-align:right;">
-36
-</td>
-<td style="text-align:right;">
-47.12
-</td>
-<td style="text-align:right;">
--1.26
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-91.74
+12.22
 </td>
 </tr>
 <tr>
@@ -1016,19 +1020,19 @@ MCD
 McDonald’s Corporation
 </td>
 <td style="text-align:right;">
-187
+175
 </td>
 <td style="text-align:right;">
-250.60
+235.81
 </td>
 <td style="text-align:right;">
 10.04
 </td>
 <td style="text-align:right;">
-24.97
+23.49
 </td>
 <td style="text-align:right;">
-24.94
+24.57
 </td>
 </tr>
 <tr>
@@ -1039,19 +1043,19 @@ NKE
 NIKE Inc
 </td>
 <td style="text-align:right;">
-226
+207
 </td>
 <td style="text-align:right;">
-142.95
+131.18
 </td>
 <td style="text-align:right;">
 3.81
 </td>
 <td style="text-align:right;">
-37.52
+34.43
 </td>
 <td style="text-align:right;">
-29.85
+29.33
 </td>
 </tr>
 <tr>
@@ -1062,65 +1066,134 @@ NWL
 Newell Brands Inc
 </td>
 <td style="text-align:right;">
-11
+10
 </td>
 <td style="text-align:right;">
-25.86
+23.15
 </td>
 <td style="text-align:right;">
 1.34
 </td>
 <td style="text-align:right;">
-19.30
+17.28
 </td>
 <td style="text-align:right;">
-13.26
+11.95
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-PENN
+POOL
 </td>
 <td style="text-align:left;">
-Penn National Gaming Inc
+Pool Corporation
 </td>
 <td style="text-align:right;">
-8
+19
 </td>
 <td style="text-align:right;">
-47.27
+465.81
 </td>
 <td style="text-align:right;">
-2.48
+15.97
 </td>
 <td style="text-align:right;">
-19.88
+29.17
 </td>
 <td style="text-align:right;">
-19.53
+0.00
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-RL
+PVH
 </td>
 <td style="text-align:left;">
-Ralph Lauren Corporation
+PVH Corp
 </td>
 <td style="text-align:right;">
-9
+6
 </td>
 <td style="text-align:right;">
-126.58
+79.16
 </td>
 <td style="text-align:right;">
-6.72
+7.00
 </td>
 <td style="text-align:right;">
-18.85
+11.31
 </td>
 <td style="text-align:right;">
-13.28
+9.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RCL
+</td>
+<td style="text-align:left;">
+Royal Caribbean Group
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+69.60
+</td>
+<td style="text-align:right;">
+-20.89
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+169.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TGT
+</td>
+<td style="text-align:left;">
+Target Corporation
+</td>
+<td style="text-align:right;">
+106
+</td>
+<td style="text-align:right;">
+224.10
+</td>
+<td style="text-align:right;">
+14.10
+</td>
+<td style="text-align:right;">
+15.89
+</td>
+<td style="text-align:right;">
+16.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TSCO
+</td>
+<td style="text-align:left;">
+Tractor Supply Company
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+221.93
+</td>
+<td style="text-align:right;">
+8.61
+</td>
+<td style="text-align:right;">
+25.78
+</td>
+<td style="text-align:right;">
+21.41
 </td>
 </tr>
 <tr>
@@ -1131,42 +1204,19 @@ TSLA
 Tesla Inc
 </td>
 <td style="text-align:right;">
-886
+866
 </td>
 <td style="text-align:right;">
-856.98
+838.29
 </td>
 <td style="text-align:right;">
 4.90
 </td>
 <td style="text-align:right;">
-174.86
+171.04
 </td>
 <td style="text-align:right;">
-88.50
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-UA
-</td>
-<td style="text-align:left;">
-Under Armour Inc
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-14.46
-</td>
-<td style="text-align:right;">
-0.77
-</td>
-<td style="text-align:right;">
-18.78
-</td>
-<td style="text-align:right;">
-24.75
+81.97
 </td>
 </tr>
 <tr>
@@ -1180,62 +1230,16 @@ Under Armour Inc
 7
 </td>
 <td style="text-align:right;">
-16.54
+15.26
 </td>
 <td style="text-align:right;">
 0.77
 </td>
 <td style="text-align:right;">
-19.50
+19.82
 </td>
 <td style="text-align:right;">
-28.17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-VFC
-</td>
-<td style="text-align:left;">
-V.F. Corporation
-</td>
-<td style="text-align:right;">
-23
-</td>
-<td style="text-align:right;">
-59.17
-</td>
-<td style="text-align:right;">
-3.55
-</td>
-<td style="text-align:right;">
-16.65
-</td>
-<td style="text-align:right;">
-16.29
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-WHR
-</td>
-<td style="text-align:left;">
-Whirlpool Corporation
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:right;">
-204.54
-</td>
-<td style="text-align:right;">
-28.36
-</td>
-<td style="text-align:right;">
-7.21
-</td>
-<td style="text-align:right;">
-8.50
+26.53
 </td>
 </tr>
 </tbody>

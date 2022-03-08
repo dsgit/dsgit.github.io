@@ -13,7 +13,7 @@
 
 <title>Utilities Sector</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -235,7 +239,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,7 +249,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Economy
      
     <span class="caret"></span>
@@ -275,7 +279,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Markets
      
     <span class="caret"></span>
@@ -296,7 +300,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sectors
      
     <span class="caret"></span>
@@ -364,7 +368,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Updated: 2022-02-19</p>
+<p>Updated: 2022-03-06</p>
 <br>
 <br>
 <div id="largest-capitalization-stocks" class="section level2">
@@ -392,7 +396,7 @@ NEE
 NextEra Energy Inc
 </td>
 <td style="text-align:right;">
-148
+157
 </td>
 </tr>
 <tr>
@@ -403,7 +407,7 @@ DUK
 Duke Energy Corporation
 </td>
 <td style="text-align:right;">
-77
+81
 </td>
 </tr>
 <tr>
@@ -414,7 +418,7 @@ SO
 The Southern Company
 </td>
 <td style="text-align:right;">
-68
+72
 </td>
 </tr>
 <tr>
@@ -425,7 +429,7 @@ D
 Dominion Energy Inc
 </td>
 <td style="text-align:right;">
-64
+67
 </td>
 </tr>
 <tr>
@@ -436,18 +440,7 @@ AEP
 American Electric Power Company Inc
 </td>
 <td style="text-align:right;">
-43
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SRE
-</td>
-<td style="text-align:left;">
-Sempra
-</td>
-<td style="text-align:right;">
-43
+49
 </td>
 </tr>
 </tbody>
@@ -477,41 +470,13 @@ Period
 <tbody>
 <tr>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-NI
+SRE
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
-NiSource Inc
+Sempra
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-4.18
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-ED
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Consolidated Edison Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-3.34
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-EXC
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Exelon Corporation
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-2.84
+11.48
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -525,7 +490,35 @@ ATO
 Atmos Energy Corporation
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-2.04
+10.53
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+AEP
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+American Electric Power Company Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+8.97
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+EIX
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Edison International
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+7.24
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -539,7 +532,7 @@ DTE
 DTE Energy Company
 </td>
 <td style="text-align:right;background-color: #e8fbe8 !important;">
-0.75
+6.57
 </td>
 <td style="text-align:left;background-color: #e8fbe8 !important;">
 top monthly
@@ -553,164 +546,10 @@ PPL
 PPL Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--12.00
+-10.06
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-NEE
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-NextEra Energy Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--10.23
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-AWK
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-American Water Works Company Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--7.78
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-AES
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-The AES Corporation
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--6.70
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-WEC
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-WEC Energy Group Inc
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--6.47
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom monthly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-DTE
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-DTE Energy Company
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-2.75
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-ED
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Consolidated Edison Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-1.38
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-DUK
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Duke Energy Corporation
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-1.06
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-D
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Dominion Energy Inc
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-0.09
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-ATO
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-Atmos Energy Corporation
-</td>
-<td style="text-align:right;background-color: #e8fbe8 !important;">
-0.04
-</td>
-<td style="text-align:left;background-color: #e8fbe8 !important;">
-top weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-PPL
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-PPL Corporation
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--8.93
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: #ffebeb !important;">
-SO
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-The Southern Company
-</td>
-<td style="text-align:right;background-color: #ffebeb !important;">
--4.52
-</td>
-<td style="text-align:left;background-color: #ffebeb !important;">
-bottom weekly
 </td>
 </tr>
 <tr>
@@ -721,7 +560,147 @@ NRG
 NRG Energy Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--3.17
+-4.57
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+EVRG
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Evergy Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-2.35
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+ES
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Eversource Energy
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.27
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+SO
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+The Southern Company
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-0.60
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom monthly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+AEP
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+American Electric Power Company Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+7.68
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+SRE
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Sempra
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+7.41
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ATO
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Atmos Energy Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.47
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+ETR
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Entergy Corporation
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+6.31
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+XEL
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+Xcel Energy Inc
+</td>
+<td style="text-align:right;background-color: #e8fbe8 !important;">
+5.99
+</td>
+<td style="text-align:left;background-color: #e8fbe8 !important;">
+top weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NRG
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+NRG Energy Inc
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+-1.13
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PPL
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PPL Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+0.08
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -735,7 +714,7 @@ EVRG
 Evergy Inc
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--2.81
+1.84
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -743,13 +722,27 @@ bottom weekly
 </tr>
 <tr>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CNP
+AES
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
-CenterPoint Energy Inc
+The AES Corporation
 </td>
 <td style="text-align:right;background-color: #ffebeb !important;">
--2.27
+3.36
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+bottom weekly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #ffebeb !important;">
+PNW
+</td>
+<td style="text-align:left;background-color: #ffebeb !important;">
+Pinnacle West Capital Corporation
+</td>
+<td style="text-align:right;background-color: #ffebeb !important;">
+3.42
 </td>
 <td style="text-align:left;background-color: #ffebeb !important;">
 bottom weekly
@@ -797,19 +790,19 @@ AEP
 American Electric Power Company Inc
 </td>
 <td style="text-align:right;">
-43
+49
 </td>
 <td style="text-align:right;">
-85.71
+96.33
 </td>
 <td style="text-align:right;">
-4.76
+4.96
 </td>
 <td style="text-align:right;">
-18.00
+19.42
 </td>
 <td style="text-align:right;">
-17.24
+17.89
 </td>
 </tr>
 <tr>
@@ -823,16 +816,16 @@ The AES Corporation
 15
 </td>
 <td style="text-align:right;">
-21.26
+21.82
 </td>
 <td style="text-align:right;">
-0.77
+-0.61
 </td>
 <td style="text-align:right;">
-23.78
+NA
 </td>
 <td style="text-align:right;">
-13.00
+12.79
 </td>
 </tr>
 <tr>
@@ -843,65 +836,19 @@ ATO
 Atmos Energy Corporation
 </td>
 <td style="text-align:right;">
-14
+16
 </td>
 <td style="text-align:right;">
-106.04
+116.15
 </td>
 <td style="text-align:right;">
-5.25
+5.29
 </td>
 <td style="text-align:right;">
-20.81
+21.94
 </td>
 <td style="text-align:right;">
-19.34
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AWK
-</td>
-<td style="text-align:left;">
-American Water Works Company Inc
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-148.26
-</td>
-<td style="text-align:right;">
-6.94
-</td>
-<td style="text-align:right;">
-21.36
-</td>
-<td style="text-align:right;">
-33.22
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-CNP
-</td>
-<td style="text-align:left;">
-CenterPoint Energy Inc
-</td>
-<td style="text-align:right;">
-17
-</td>
-<td style="text-align:right;">
-26.61
-</td>
-<td style="text-align:right;">
-1.50
-</td>
-<td style="text-align:right;">
-17.93
-</td>
-<td style="text-align:right;">
-18.38
+19.92
 </td>
 </tr>
 <tr>
@@ -912,19 +859,19 @@ D
 Dominion Energy Inc
 </td>
 <td style="text-align:right;">
-64
+67
 </td>
 <td style="text-align:right;">
-79.15
+82.70
 </td>
 <td style="text-align:right;">
-0.89
+3.98
 </td>
 <td style="text-align:right;">
-19.19
+20.78
 </td>
 <td style="text-align:right;">
-19.08
+19.30
 </td>
 </tr>
 <tr>
@@ -935,19 +882,19 @@ DTE
 DTE Energy Company
 </td>
 <td style="text-align:right;">
-23
+25
 </td>
 <td style="text-align:right;">
-119.35
+127.88
 </td>
 <td style="text-align:right;">
-4.66
+4.67
 </td>
 <td style="text-align:right;">
-21.07
+27.37
 </td>
 <td style="text-align:right;">
-19.46
+20.45
 </td>
 </tr>
 <tr>
@@ -958,42 +905,88 @@ DUK
 Duke Energy Corporation
 </td>
 <td style="text-align:right;">
-77
+81
 </td>
 <td style="text-align:right;">
-99.81
+105.26
 </td>
 <td style="text-align:right;">
 4.94
 </td>
 <td style="text-align:right;">
-20.21
+21.31
 </td>
 <td style="text-align:right;">
-18.35
+18.38
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-ED
+EIX
 </td>
 <td style="text-align:left;">
-Consolidated Edison Inc
+Edison International
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+65.59
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+32.84
+</td>
+<td style="text-align:right;">
+13.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ES
+</td>
+<td style="text-align:left;">
+Eversource Energy
 </td>
 <td style="text-align:right;">
 30
 </td>
 <td style="text-align:right;">
-84.61
+85.94
 </td>
 <td style="text-align:right;">
-3.85
+3.54
 </td>
 <td style="text-align:right;">
-21.98
+24.28
 </td>
 <td style="text-align:right;">
-18.55
+20.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ETR
+</td>
+<td style="text-align:left;">
+Entergy Corporation
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+112.24
+</td>
+<td style="text-align:right;">
+5.54
+</td>
+<td style="text-align:right;">
+20.26
+</td>
+<td style="text-align:right;">
+16.34
 </td>
 </tr>
 <tr>
@@ -1004,42 +997,19 @@ EVRG
 Evergy Inc
 </td>
 <td style="text-align:right;">
-14
+15
 </td>
 <td style="text-align:right;">
-60.97
+63.70
 </td>
 <td style="text-align:right;">
-3.84
+3.83
 </td>
 <td style="text-align:right;">
-15.89
+16.63
 </td>
 <td style="text-align:right;">
-17.73
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-EXC
-</td>
-<td style="text-align:left;">
-Exelon Corporation
-</td>
-<td style="text-align:right;">
-41
-</td>
-<td style="text-align:right;">
-41.63
-</td>
-<td style="text-align:right;">
-1.71
-</td>
-<td style="text-align:right;">
-24.34
-</td>
-<td style="text-align:right;">
-18.66
+17.92
 </td>
 </tr>
 <tr>
@@ -1050,42 +1020,19 @@ NEE
 NextEra Energy Inc
 </td>
 <td style="text-align:right;">
-148
+157
 </td>
 <td style="text-align:right;">
-74.15
+80.21
 </td>
 <td style="text-align:right;">
 1.81
 </td>
 <td style="text-align:right;">
-42.33
+44.31
 </td>
 <td style="text-align:right;">
-27.17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-NiSource Inc
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-28.45
-</td>
-<td style="text-align:right;">
-1.12
-</td>
-<td style="text-align:right;">
-30.97
-</td>
-<td style="text-align:right;">
-19.61
+27.55
 </td>
 </tr>
 <tr>
@@ -1099,16 +1046,39 @@ NRG Energy Inc
 9
 </td>
 <td style="text-align:right;">
-38.43
+37.56
 </td>
 <td style="text-align:right;">
-9.98
+8.93
 </td>
 <td style="text-align:right;">
-3.85
+4.21
 </td>
 <td style="text-align:right;">
-11.34
+9.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PNW
+</td>
+<td style="text-align:left;">
+Pinnacle West Capital Corporation
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+74.45
+</td>
+<td style="text-align:right;">
+5.47
+</td>
+<td style="text-align:right;">
+13.61
+</td>
+<td style="text-align:right;">
+18.02
 </td>
 </tr>
 <tr>
@@ -1119,19 +1089,19 @@ PPL
 PPL Corporation
 </td>
 <td style="text-align:right;">
-20
+19
 </td>
 <td style="text-align:right;">
-26.10
+26.45
 </td>
 <td style="text-align:right;">
--1.72
+-1.94
 </td>
 <td style="text-align:right;">
 NA
 </td>
 <td style="text-align:right;">
-17.95
+18.38
 </td>
 </tr>
 <tr>
@@ -1142,19 +1112,19 @@ SO
 The Southern Company
 </td>
 <td style="text-align:right;">
-68
+72
 </td>
 <td style="text-align:right;">
-63.77
+67.58
 </td>
 <td style="text-align:right;">
-2.80
+2.24
 </td>
 <td style="text-align:right;">
-22.77
+30.17
 </td>
 <td style="text-align:right;">
-18.45
+18.21
 </td>
 </tr>
 <tr>
@@ -1165,42 +1135,42 @@ SRE
 Sempra
 </td>
 <td style="text-align:right;">
-43
+48
 </td>
 <td style="text-align:right;">
-135.51
+151.92
 </td>
 <td style="text-align:right;">
-3.60
+4.01
 </td>
 <td style="text-align:right;">
-18.19
+37.89
 </td>
 <td style="text-align:right;">
-15.90
+16.98
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-WEC
+XEL
 </td>
 <td style="text-align:left;">
-WEC Energy Group Inc
+Xcel Energy Inc
 </td>
 <td style="text-align:right;">
-28
+39
 </td>
 <td style="text-align:right;">
-90.00
+71.26
 </td>
 <td style="text-align:right;">
-4.11
+2.96
 </td>
 <td style="text-align:right;">
-21.90
+24.07
 </td>
 <td style="text-align:right;">
-20.70
+21.32
 </td>
 </tr>
 </tbody>
