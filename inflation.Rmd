@@ -52,10 +52,11 @@ ggplot(r, aes(x=date, y=rate)) +
 ```
 
 ```{r, include=FALSE}
-d <- full_join(g,  r,  by="date") %>% slice_tail(n=6)
+d <- full_join(g,  r,  by="date") %>% slice_tail(n=6) %>% 
+   mutate(cpi=round(cpi,1), rate=round(rate,2))
 ```
 
 ```{r, echo=FALSE, results='asis'}
 library(knitr)
-kable(d, booktabs=TRUE, caption="Recent CPI and Annual Change") 
+kable(d, booktabs = TRUE, caption="Recent CPI and Annual Change")  %>% kable_styling(full_width = F)
 ```

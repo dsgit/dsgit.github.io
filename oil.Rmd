@@ -5,7 +5,7 @@ title: Oil Price
 
 ```{r updatedatabase, include=FALSE}
 # Update database.
-source("/base/inv/data/oil/01-fred2db.R")
+source("/base/inv/data/fred/01-fred2db.R")
 ```
 
 ```{r, include=FALSE}
@@ -14,21 +14,21 @@ library(RSQLite)
 suppressMessages(library(ggplot2))
 suppressMessages(library(tidyverse))
 
-# Get the ETF prices from the database.
+# Get the prices from the database.
 con <- dbConnect(SQLite(), dbname="/data/db")
-prices <- dbGetQuery(con, "select * from oil;")
+prices <- dbGetQuery(con, "select * from fred;")
 dbDisconnect(con)
 
 prices <- data.frame(prices) %>%
    mutate(date = as.Date(date)) %>%
    filter(date >= "2017-01-01") %>% 
    drop_na()
-latest <- prices %>% pull(date) %>% tail(1)
+latest <- prices %>% arrange(date) %>% pull(date) %>% tail(1)
 ```
 
 ```{r, echo=FALSE}
 oilprice <- prices %>% filter(type == "oil")
-ggplot(oilprice, aes(x=date, y=price)) +
+ggplot(oilprice, aes(x=date, y=value)) +
    geom_line() +
    ylab("Oil Price") +
    xlab("Date") + 
@@ -38,7 +38,7 @@ ggplot(oilprice, aes(x=date, y=price)) +
 ## Gasoline Price
 ```{r, echo=FALSE}
 gasprice <- prices %>% filter(type == "gasoline")
-ggplot(gasprice, aes(x=date, y=price)) +
+ggplot(gasprice, aes(x=date, y=value)) +
    geom_line() +
    ylab("Gasoline Price") +
    xlab("Date") + 

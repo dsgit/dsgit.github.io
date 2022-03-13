@@ -13,11 +13,13 @@ y <- getSymbols("^VIX", auto.assign=F)
 colnames(y) <- c("op","hi", "lo", "cl", "vo", "ac")
 y <- y["2017/"]
 
-y <- data.frame(y) %>%
-   rownames_to_column("date") %>%
-   mutate(date = as.Date(date)) %>% 
-   drop_na()
-latest <- y %>% pull(date) %>% tail(1)
+y <- data.frame(y) %>% drop_na()
+dates <- rownames(y)
+dates <- gsub("X", "", dates)
+dates <- gsub("\\.", "-", dates, perl=T)
+dates <- as.Date(dates)
+y <- as_tibble(y) %>% add_column(date=dates)
+latest <- tail(dates, 1)
 
 ```
 ```{r, echo=FALSE}
