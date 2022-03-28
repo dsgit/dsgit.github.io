@@ -17,8 +17,9 @@ colnames(g) <- "gold"
 g <- g["2017/"]
 
 g <- data.frame(g) %>%
-   rownames_to_column("date") %>%
-   mutate(date = as.Date(date)) %>%
+   rownames_to_column("date") %>% 
+   mutate(date = as.character(date)) %>% 
+#   mutate(date = str_extract(date, "\\d{4}-\\{2}-\\d{2}")) %>%
    drop_na()
 latest <- g %>% pull(date) %>% tail(1)
 ```
@@ -32,8 +33,8 @@ k <- kable(h, booktabs=TRUE) %>% kable_styling(full_width = F)
 k
 ```
 
-
 ```{r, echo=FALSE}
+g <- g %>% mutate(date  = as.Date(date)) 
 ggplot(g, aes(x=date, y=gold)) +
    geom_line() +
    ylab("Gold Price") +
